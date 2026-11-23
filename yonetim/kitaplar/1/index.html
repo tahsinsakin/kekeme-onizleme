@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yarım Ses · Yönetim · Kekeme Yayınları</title>
+  <link rel="icon" href="/kekeme-onizleme/static/img/favicon-64.png" type="image/png">
+  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css">
+  <script src="/kekeme-onizleme/static/js/admin.js" defer></script>
+
+<style>
+.demo-bar{position:relative;z-index:60;display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;background:#9f1616;color:#fff;padding:10px 16px;font:500 15px/1.3 "Instrument Sans",system-ui,sans-serif;text-align:center}
+.demo-bar a{background:#fff;color:#1c1a17!important;text-decoration:none;font-weight:700;padding:9px 14px;border-radius:10px;white-space:nowrap}
+.demo-modal{position:fixed;inset:0;z-index:1001;background:rgba(20,18,15,.55);display:grid;place-items:center;padding:20px}
+.demo-modal[hidden]{display:none}
+.demo-modal div{background:#fff;color:#161512;border-radius:18px;padding:28px;max-width:460px;font:400 18px/1.5 "Instrument Sans",system-ui,sans-serif}
+.demo-modal h2{font:500 26px/1.2 "Fraunces",Georgia,serif;margin:0 0 10px}
+.demo-modal button{font:700 18px/1 "Instrument Sans",sans-serif;background:#161512;color:#fff;border:0;border-radius:10px;padding:16px 26px;cursor:pointer;margin-top:16px}
+</style>
+</head>
+<body class="adm" >
+<div class="demo-bar" role="region" aria-label="Önizleme"><span><b>Önizleme</b> · Değişiklikler kaydedilmez</span><a href="/kekeme-onizleme/">Siteye dön →</a></div>
+<div class="demo-modal" id="demo-modal" hidden role="dialog" aria-modal="true"><div><h2>Bu bir önizleme</h2><p id="demo-p"></p><button type="button" id="demo-ok">Tamam</button></div></div>
+  <a class="adm-skip" href="#icerik">İçeriğe geç</a>
+  
+  <header class="adm-top">
+    <div class="adm-top__row">
+      <a class="adm-brand" href="/kekeme-onizleme/yonetim/"><img src="/kekeme-onizleme/static/img/logo-acik.png" alt="" width="40" height="37">Kekeme Yayınları <span>Yönetim</span></a>
+      <div class="adm-top__tools">
+        <a class="adm-top__link adm-top__help" href="/kekeme-onizleme/yonetim/yardim/" ><span aria-hidden="true">?</span> Yardım</a>
+        <button type="button" class="adm-textsize" data-textsize>Yazı boyu: Normal</button>
+        <a class="adm-top__link" href="/kekeme-onizleme/" target="_blank" rel="noopener">Sitede gör ↗</a>
+        <form method="post" action="/yonetim/cikis">
+          <input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA">
+          <button class="adm-top__link adm-top__logout" type="submit">Çıkış</button>
+        </form>
+      </div>
+    </div>
+    <nav class="adm-nav" aria-label="Yönetim menüsü">
+      <a href="/kekeme-onizleme/yonetim/" >Ana Sayfa</a>
+      <a href="/kekeme-onizleme/yonetim/kitaplar/" aria-current="page">Kitaplar</a>
+      <a href="/kekeme-onizleme/yonetim/yazarlar/" >Yazarlar</a>
+      <a href="/kekeme-onizleme/yonetim/haberler/" >Haber ve Etkinlik</a>
+      <a href="/kekeme-onizleme/yonetim/mesajlar/" >Mesajlar</a>
+    </nav>
+  </header>
+  
+
+  <main class="adm-main adm-main--wide" id="icerik">
+    <div class="adm-session" role="alert" data-session-lost hidden>
+      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/" target="_blank">Buraya dokunup yeniden giriş yapın</a>, sonra bu sayfaya dönüp kaydedin.</p>
+    </div>
+    
+    
+    
+<p class="back"><a href="/kekeme-onizleme/yonetim/kitaplar/">← Kitap listesine dön</a></p>
+<h1 class="adm-h1">Yarım Ses</h1>
+<p class="lead">Değiştirmek istediğiniz yeri düzeltin, sonra en alttaki <strong>Değişiklikleri kaydet</strong> düğmesine basın.</p>
+
+<div class="editor">
+<form method="post" enctype="multipart/form-data" class="aform" data-draft="kitap-1"  data-preview-form
+      action="/yonetim/kitaplar/1">
+  <input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA">
+
+  
+  
+
+  <fieldset class="step" data-step-title="Kitabın adı">
+    <legend><span class="step__n">1</span> Kitabın adı ne?</legend>
+    
+<div class="f">
+  <label for="f-title">Kitabın adı <span class="f__req">(zorunlu)</span></label>
+  <p class="f__hint" id="h-title">Kapakta yazdığı gibi yazın.</p>
+  <input id="f-title" name="title" type="text" value="Yarım Ses" maxlength="200"
+    aria-describedby="h-title" required data-preview-src="title">
+</div>
+
+    
+<div class="f">
+  <label for="f-subtitle">Alt başlık</label>
+  <p class="f__hint" id="h-subtitle">Varsa. Yoksa boş bırakın.</p>
+  <input id="f-subtitle" name="subtitle" type="text" value="" maxlength="200"
+    aria-describedby="h-subtitle"  data-preview-src="subtitle">
+</div>
+
+  </fieldset>
+
+  <fieldset class="step" data-step-title="Yazar">
+    <legend><span class="step__n">2</span> Kitabın yazarı kim?</legend>
+    <div class="f">
+      <label for="f-author_id">Listeden seçin</label>
+      <select id="f-author_id" name="author_id" data-preview-src="author">
+        <option value="">— Yazar seçin —</option>
+        <option value="4" >Halit Ekmen</option><option value="2" selected>Kerem Sağnak</option><option value="5" >Mira Ostrova</option><option value="1" >Nevin Aral</option><option value="3" >Selma Duru</option>
+      </select>
+    </div>
+    <div class="f f--or">
+      <label for="f-new_author">Listede yoksa adını buraya yazın</label>
+      <p class="f__hint" id="h-new_author">Kaydettiğinizde yazar kendiliğinden eklenir. Fotoğrafını ve hayatını sonra “Yazarlar” bölümünden ekleyebilirsiniz.</p>
+      <input id="f-new_author" name="new_author" type="text" maxlength="160" value="" aria-describedby="h-new_author" data-preview-src="new_author" autocomplete="off">
+    </div>
+    
+<div class="f">
+  <label for="f-translator">Çeviren</label>
+  <p class="f__hint" id="h-translator">Kitap çeviriyse çevirmenin adı. Değilse boş bırakın.</p>
+  <input id="f-translator" name="translator" type="text" value="" maxlength="200"
+    aria-describedby="h-translator"  data-preview-src="translator">
+</div>
+
+  </fieldset>
+
+  <fieldset class="step" data-step-title="Kapak">
+    <legend><span class="step__n">3</span> Kapak fotoğrafı</legend>
+    
+<div class="f f--image">
+  <span class="f__label">Kapak fotoğrafı</span>
+  <p class="f__hint">Telefonla çektiğiniz fotoğraf da olur; boyutunu biz ayarlarız. Kapak yoksa sitede kitabın adıyla şık bir kapak kendiliğinden görünür.</p>
+  <div class="img-pick">
+    <div class="img-pick__preview" data-preview>
+      <img src="/kekeme-onizleme/gorsel/cover-9c8f03075944946f2e43c6b5.webp" alt="Şu anki fotoğraf">
+    </div>
+    <div class="img-pick__actions">
+      <label class="abtn abtn--line img-pick__btn">
+        <input type="file" name="image" accept="image/jpeg,image/png,image/webp" data-image-input>
+        Fotoğrafı değiştir
+      </label>
+      <p class="f__hint" data-filename>JPG veya PNG, en fazla 10 MB. Boyutunu biz ayarlarız.</p>
+      
+      <label class="check"><input type="checkbox" name="remove_image" value="1"> Fotoğrafı kaldır</label>
+      
+    </div>
+  </div>
+</div>
+
+  </fieldset>
+
+  <fieldset class="step" data-step-title="Tanıtım">
+    <legend><span class="step__n">4</span> Kitabı kısaca tanıtın</legend>
+    
+<div class="f">
+  <label for="f-description">Arka kapak yazısı</label>
+  <p class="f__hint" id="h-description">Arka kapaktaki yazıyı buraya yapıştırabilirsiniz. Paragraflar arasında bir satır boş bırakın.</p>
+  <textarea id="f-description" name="description" rows="10" maxlength="20000" aria-describedby="h-description">Dilinin ucundaki kelimeleri bir türlü söyleyemeyen genç bir radyo spikerinin, babasının ölümünden sonra eski bir ses arşivinde kendi geçmişiyle karşılaşmasını anlatıyor.
+
+Yarım Ses, söylenemeyenin de bir dil olduğunu hatırlatan, sıcak ve cesur bir ilk roman.</textarea>
+</div>
+
+    
+<div class="f">
+  <label for="f-editor_note">Yayınevinin notu: Bu kitabı neden yayımladınız?</label>
+  <p class="f__hint" id="h-editor_note">İsteğe bağlı. Birkaç cümle yeter. Kitap sayfasında imzanızla görünür; okurlar ve Google, yayınevinin kendi sesini çok sever.</p>
+  <textarea id="f-editor_note" name="editor_note" rows="4" maxlength="5000" aria-describedby="h-editor_note">Bu romanı ilk okuduğumuzda, yarım kalan cümlelerin de bir hikâye anlattığını hissettik. Adımızı taşıyan bir kitapla yola çıkmak istedik.</textarea>
+</div>
+
+    <details class="more" open>
+      <summary>Okuma parçası ve içindekiler de eklemek ister misiniz? <span>(isteğe bağlı)</span></summary>
+      
+<div class="f">
+  <label for="f-excerpt">Okuma parçası</label>
+  <p class="f__hint" id="h-excerpt">Kitaptan birkaç sayfa.</p>
+  <textarea id="f-excerpt" name="excerpt" rows="8" maxlength="30000" aria-describedby="h-excerpt">Tren istasyonunda bekleyen kadın, saatin kaç olduğunu bir kez daha sordu. Kimse yanıt vermedi. Peronun ucunda bir çocuk, elindeki kâğıt gemiyi rayların arasındaki su birikintisine bırakmaya çalışıyordu; gemi her seferinde devrilip yeniden kalkıyordu.
+
+Kadın çantasını dizlerinin üstüne çekti. İçinde bir mektup vardı, otuz yıldır göndermediği bir mektup. Bu sabah, nihayet, onu kendi eliyle götürmeye karar vermişti.</textarea>
+</div>
+
+      
+<div class="f">
+  <label for="f-toc">İçindekiler</label>
+  <p class="f__hint" id="h-toc">Her bölümü ayrı satıra yazın.</p>
+  <textarea id="f-toc" name="toc" rows="5" maxlength="10000" aria-describedby="h-toc"></textarea>
+</div>
+
+    </details>
+  </fieldset>
+
+  <fieldset class="step" data-step-title="Fiyat">
+    <legend><span class="step__n">5</span> Fiyatı ve nereden alınacağı</legend>
+    
+<div class="f">
+  <label for="f-price">Fiyat</label>
+  <p class="f__hint" id="h-price">İsterseniz yazın, örneğin: 245 TL. Boş bırakırsanız sitede fiyat görünmez.</p>
+  <input id="f-price" name="price" type="text" value="285 TL" maxlength="40"
+    aria-describedby="h-price"  inputmode="decimal" data-preview-src="price">
+</div>
+
+    <p class="f__sub">Satış siteleri <span class="f__hint">(isteğe bağlı)</span></p>
+    <p class="f__hint">Kitabın satış sitesindeki sayfasını açın, tarayıcının en üstündeki adresi kopyalayıp buraya yapıştırın. Boş bırakılanlar sitede görünmez.</p>
+    
+<div class="f">
+  <label for="f-buy_kitapyurdu">Kitapyurdu</label>
+  
+  <input id="f-buy_kitapyurdu" name="buy_kitapyurdu" type="url" value="https://www.kitapyurdu.com/" maxlength="600"
+      placeholder="https://www.kitapyurdu.com/..." data-preview-shop="Kitapyurdu">
+</div>
+
+    
+<div class="f">
+  <label for="f-buy_dr">D&amp;R</label>
+  
+  <input id="f-buy_dr" name="buy_dr" type="url" value="https://www.dr.com.tr/" maxlength="600"
+      placeholder="https://www.dr.com.tr/..." data-preview-shop="D&R">
+</div>
+
+    
+<div class="f">
+  <label for="f-buy_idefix">İdefix</label>
+  
+  <input id="f-buy_idefix" name="buy_idefix" type="url" value="" maxlength="600"
+      placeholder="https://www.idefix.com/..." data-preview-shop="İdefix">
+</div>
+
+    
+<div class="f">
+  <label for="f-buy_amazon">Amazon</label>
+  
+  <input id="f-buy_amazon" name="buy_amazon" type="url" value="" maxlength="600"
+      placeholder="https://www.amazon.com.tr/..." data-preview-shop="Amazon">
+</div>
+
+    
+<div class="f">
+  <label for="f-buy_other">Başka bir satış yeri</label>
+  <p class="f__hint" id="h-buy_other">Örneğin bir kitapçının kendi sitesi.</p>
+  <input id="f-buy_other" name="buy_other" type="url" value="" maxlength="600"
+    aria-describedby="h-buy_other"  data-preview-shop="Diğer">
+</div>
+
+  </fieldset>
+
+  <fieldset class="step" data-step-title="Yayınla">
+    <legend><span class="step__n">6</span> Sitede görünsün mü?</legend>
+    <div class="f">
+      <div class="choices">
+        <label class="choice"><input type="radio" name="status" value="published" data-preview-src="status" checked><span><strong>Evet, yayında</strong>Kitap çıktı, herkes görsün.</span></label>
+        <label class="choice"><input type="radio" name="status" value="soon" data-preview-src="status" ><span><strong>Yakında çıkacak</strong>“Sıradakiler” bölümünde görünsün.</span></label>
+        <label class="choice"><input type="radio" name="status" value="draft" data-preview-src="status" ><span><strong>Hayır, şimdilik gizli</strong>Yalnızca siz görün.</span></label>
+      </div>
+    </div>
+    <label class="check check--big"><input type="checkbox" name="featured" value="1" checked> Bu kitabı ana sayfanın en üstünde büyük olarak göster</label>
+
+    <details class="more" open>
+      <summary>Künye bilgileri (ISBN, sayfa sayısı, tür…) <span>(isteğe bağlı)</span></summary>
+      <div class="grid2">
+        
+<div class="f">
+  <label for="f-category">Tür</label>
+  <p class="f__hint" id="h-category">Örn. Roman, Öykü, Şiir, Deneme</p>
+  <input id="f-category" name="category" type="text" value="Roman" maxlength="80"
+    aria-describedby="h-category"  list="tur-listesi" data-preview-src="category">
+</div>
+
+        
+<div class="f">
+  <label for="f-series">Dizi</label>
+  <p class="f__hint" id="h-series">Kitap bir dizinin parçasıysa.</p>
+  <input id="f-series" name="series" type="text" value="Edebiyat" maxlength="80"
+    aria-describedby="h-series"  list="dizi-listesi">
+</div>
+
+        
+<div class="f">
+  <label for="f-isbn">ISBN</label>
+  <p class="f__hint" id="h-isbn">Arka kapaktaki barkodun üstündeki numara.</p>
+  <input id="f-isbn" name="isbn" type="text" value="978-605-00000-01-0" maxlength="20"
+    aria-describedby="h-isbn"  inputmode="numeric">
+</div>
+
+        
+<div class="f">
+  <label for="f-pages">Sayfa sayısı</label>
+  
+  <input id="f-pages" name="pages" type="text" value="143" maxlength="6"
+      inputmode="numeric" pattern="[0-9]*">
+</div>
+
+        
+<div class="f">
+  <label for="f-publish_date">Yayın tarihi</label>
+  <p class="f__hint" id="h-publish_date">Yakında çıkacaksa tahmini tarih.</p>
+  <input id="f-publish_date" name="publish_date" type="date" value="2026-10-14" maxlength="10"
+    aria-describedby="h-publish_date"  >
+</div>
+
+        
+<div class="f">
+  <label for="f-dimensions">Ebat</label>
+  <p class="f__hint" id="h-dimensions">Örn. 13,5 x 21 cm</p>
+  <input id="f-dimensions" name="dimensions" type="text" value="13,5 x 21 cm" maxlength="40"
+    aria-describedby="h-dimensions"  >
+</div>
+
+        
+<div class="f">
+  <label for="f-edition">Baskı</label>
+  <p class="f__hint" id="h-edition">Örn. 1. Baskı</p>
+  <input id="f-edition" name="edition" type="text" value="1. Baskı" maxlength="80"
+    aria-describedby="h-edition"  >
+</div>
+
+        
+<div class="f">
+  <label for="f-first_edition">İlk basım</label>
+  <p class="f__hint" id="h-first_edition">Örn. Mart 2026</p>
+  <input id="f-first_edition" name="first_edition" type="text" value="" maxlength="80"
+    aria-describedby="h-first_edition"  >
+</div>
+
+        
+<div class="f">
+  <label for="f-original_title">Özgün adı</label>
+  <p class="f__hint" id="h-original_title">Çeviri kitaplarda.</p>
+  <input id="f-original_title" name="original_title" type="text" value="" maxlength="200"
+    aria-describedby="h-original_title"  >
+</div>
+
+        
+<div class="f">
+  <label for="f-editor">Editör</label>
+  
+  <input id="f-editor" name="editor" type="text" value="Kekeme Yayın Kurulu" maxlength="200"
+      >
+</div>
+
+        
+<div class="f">
+  <label for="f-cover_designer">Kapak tasarımı</label>
+  
+  <input id="f-cover_designer" name="cover_designer" type="text" value="Kekeme Atölye" maxlength="200"
+      >
+</div>
+
+      </div>
+      <datalist id="tur-listesi"><option value="Anı"><option value="Deneme"><option value="Gezi"><option value="Roman"><option value="Öykü"><option value="Şiir"><option value="Roman"><option value="Öykü"><option value="Şiir"><option value="Deneme"><option value="Anlatı"><option value="Çocuk"></datalist>
+      <datalist id="dizi-listesi"><option value="Dünya Edebiyatı"><option value="Edebiyat"><option value="Kıyı Öyküleri"></datalist>
+    </details>
+  </fieldset>
+
+  
+<div class="savebar">
+  <button class="abtn abtn--primary abtn--big" type="submit">Değişiklikleri kaydet</button>
+  <a class="abtn abtn--line" href="/kekeme-onizleme/yonetim/kitaplar/">Vazgeç</a>
+  <a class="abtn abtn--ghost" href="/kekeme-onizleme/kitap/yarim-ses/" target="_blank" rel="noopener">Sitede gör ↗</a>
+  <a class="abtn abtn--danger" href="/kekeme-onizleme/yonetim/kitaplar/">Sil</a>
+  <p class="savebar__draft" data-draft-status aria-live="polite"></p>
+</div>
+
+</form>
+
+
+
+
+<aside class="preview" aria-label="Önizleme" data-live-preview hidden>
+  <p class="preview__label">Sitede böyle görünecek</p>
+  <div class="preview__card">
+    <div class="preview__cover" data-pv-cover>
+      <img src="/kekeme-onizleme/gorsel/cover-9c8f03075944946f2e43c6b5.webp" alt="">
+      <div class="pv-blank tone-1" hidden>
+        <span class="pv-blank__author" data-pv="author"></span>
+        <span class="pv-blank__title" data-pv="title"></span>
+      </div>
+    </div>
+    <p class="preview__status" data-pv="status"></p>
+    <p class="preview__title" data-pv="title"></p>
+    <p class="preview__author" data-pv="author"></p>
+    <p class="preview__price" data-pv="price"></p>
+    <p class="preview__shops" data-pv="shops"></p>
+  </div>
+  <p class="preview__label">Google’da böyle görünecek</p>
+  <div class="serp">
+    <p class="serp__url">localhost › kitap</p>
+    <p class="serp__title" data-pv="serp-title"></p>
+    <p class="serp__desc" data-pv="serp-desc"></p>
+  </div>
+  <p class="preview__note">Bu kutu yalnızca size gösterilir.</p>
+</aside>
+</div>
+
+  </main>
+<script>
+(function(){
+  var B="/kekeme-onizleme";
+  var m=document.getElementById('demo-modal'),p=document.getElementById('demo-p');
+  function show(t){p.textContent=t;m.hidden=false;document.getElementById('demo-ok').focus();}
+  document.getElementById('demo-ok').onclick=function(){m.hidden=true;};
+  var fold=function(x){return (x||'').toLocaleLowerCase('tr-TR').replace(/[ığüşöçâîû]/g,function(c){return {'ı':'i','ğ':'g','ü':'u','ş':'s','ö':'o','ç':'c','â':'a','î':'i','û':'u'}[c];});};
+  // Arama: sayfadaki kartları/satırları süzer
+  var q=new URLSearchParams(location.search).get('ara');
+  if(q){var n=fold(q),shown=0;document.querySelectorAll('.card,.row').forEach(function(c){var ok=fold(c.textContent).indexOf(n)>=0;c.hidden=!ok;if(ok)shown++;});
+    document.querySelectorAll('input[type=search]').forEach(function(i){i.value=q;});
+    var lead=document.querySelector('.page-lead');if(lead)lead.textContent='“'+q+'” için '+shown+' sonuç.';}
+  document.addEventListener('submit',function(e){
+    var f=e.target;if(f.closest('#demo-modal'))return;
+    var a=f.getAttribute('action')||'';var get=(f.getAttribute('method')||'get').toLowerCase()==='get';
+    if(get){e.preventDefault();e.stopImmediatePropagation();var v=(f.querySelector('input[type=search]')||{}).value||'';
+      var dest=a.indexOf('/yonetim')===0?a:'/kitaplar';location.href=B+dest+'/?ara='+encodeURIComponent(v);return;}
+    e.preventDefault();e.stopImmediatePropagation();
+    if(a.indexOf('/yonetim/giris')===0){location.href=B+'/yonetim/';return;}
+    if(a.indexOf('/yonetim/cikis')===0){location.href=B+'/yonetim/giris/';return;}
+    if(a==='/iletisim'||a==='/bulten'){show('Gerçek sitede bu form gönderilir ve mesaj yönetim paneline düşer. Önizlemede gönderilmez.');return;}
+    show('Gerçek sitede bu düğme kaydeder. Önizlemede değişiklik kaydedilmez; dilediğiniz gibi deneyebilirsiniz.');
+  },true);
+})();
+</script>
+</body>
+</html>

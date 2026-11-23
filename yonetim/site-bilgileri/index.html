@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site Bilgileri · Yönetim · Kekeme Yayınları</title>
+  <link rel="icon" href="/kekeme-onizleme/static/img/favicon-64.png" type="image/png">
+  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css">
+  <script src="/kekeme-onizleme/static/js/admin.js" defer></script>
+
+<style>
+.demo-bar{position:relative;z-index:60;display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;background:#9f1616;color:#fff;padding:10px 16px;font:500 15px/1.3 "Instrument Sans",system-ui,sans-serif;text-align:center}
+.demo-bar a{background:#fff;color:#1c1a17!important;text-decoration:none;font-weight:700;padding:9px 14px;border-radius:10px;white-space:nowrap}
+.demo-modal{position:fixed;inset:0;z-index:1001;background:rgba(20,18,15,.55);display:grid;place-items:center;padding:20px}
+.demo-modal[hidden]{display:none}
+.demo-modal div{background:#fff;color:#161512;border-radius:18px;padding:28px;max-width:460px;font:400 18px/1.5 "Instrument Sans",system-ui,sans-serif}
+.demo-modal h2{font:500 26px/1.2 "Fraunces",Georgia,serif;margin:0 0 10px}
+.demo-modal button{font:700 18px/1 "Instrument Sans",sans-serif;background:#161512;color:#fff;border:0;border-radius:10px;padding:16px 26px;cursor:pointer;margin-top:16px}
+</style>
+</head>
+<body class="adm" >
+<div class="demo-bar" role="region" aria-label="Önizleme"><span><b>Önizleme</b> · Değişiklikler kaydedilmez</span><a href="/kekeme-onizleme/">Siteye dön →</a></div>
+<div class="demo-modal" id="demo-modal" hidden role="dialog" aria-modal="true"><div><h2>Bu bir önizleme</h2><p id="demo-p"></p><button type="button" id="demo-ok">Tamam</button></div></div>
+  <a class="adm-skip" href="#icerik">İçeriğe geç</a>
+  
+  <header class="adm-top">
+    <div class="adm-top__row">
+      <a class="adm-brand" href="/kekeme-onizleme/yonetim/"><img src="/kekeme-onizleme/static/img/logo-acik.png" alt="" width="40" height="37">Kekeme Yayınları <span>Yönetim</span></a>
+      <div class="adm-top__tools">
+        <a class="adm-top__link adm-top__help" href="/kekeme-onizleme/yonetim/yardim/" ><span aria-hidden="true">?</span> Yardım</a>
+        <button type="button" class="adm-textsize" data-textsize>Yazı boyu: Normal</button>
+        <a class="adm-top__link" href="/kekeme-onizleme/" target="_blank" rel="noopener">Sitede gör ↗</a>
+        <form method="post" action="/yonetim/cikis">
+          <input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA">
+          <button class="adm-top__link adm-top__logout" type="submit">Çıkış</button>
+        </form>
+      </div>
+    </div>
+    <nav class="adm-nav" aria-label="Yönetim menüsü">
+      <a href="/kekeme-onizleme/yonetim/" >Ana Sayfa</a>
+      <a href="/kekeme-onizleme/yonetim/kitaplar/" >Kitaplar</a>
+      <a href="/kekeme-onizleme/yonetim/yazarlar/" >Yazarlar</a>
+      <a href="/kekeme-onizleme/yonetim/haberler/" >Haber ve Etkinlik</a>
+      <a href="/kekeme-onizleme/yonetim/mesajlar/" >Mesajlar</a>
+    </nav>
+  </header>
+  
+
+  <main class="adm-main " id="icerik">
+    <div class="adm-session" role="alert" data-session-lost hidden>
+      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/" target="_blank">Buraya dokunup yeniden giriş yapın</a>, sonra bu sayfaya dönüp kaydedin.</p>
+    </div>
+    
+    
+    
+<p class="back"><a href="/kekeme-onizleme/yonetim/">← Ana sayfaya dön</a></p>
+<h1 class="adm-h1">Site bilgileri</h1>
+<p class="lead">Sitenin her sayfasında görünen genel bilgiler.</p>
+
+<form method="post" action="/yonetim/site-bilgileri" class="aform" data-draft="ayarlar">
+  <input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA">
+  <fieldset class="step">
+    <legend><span class="step__n">1</span> Yayınevi</legend>
+    
+<div class="f">
+  <label for="f-site_title">Yayınevinin adı</label>
+  <p class="f__hint" id="h-site_title">Tarayıcı sekmesinde ve logonun yanında görünür.</p>
+  <input id="f-site_title" name="site_title" type="text" value="Kekeme Yayınları" maxlength="120"
+    aria-describedby="h-site_title"  >
+</div>
+
+    
+<div class="f">
+  <label for="f-alt_name">Yayınevinin diğer adı</label>
+  <p class="f__hint" id="h-alt_name">Logoda yazan ad. Google iki adı da tanısın diye.</p>
+  <input id="f-alt_name" name="alt_name" type="text" value="KKM Yayınları" maxlength="120"
+    aria-describedby="h-alt_name"  >
+</div>
+
+    
+<div class="f">
+  <label for="f-owner_name">Yayınevi sahibi</label>
+  <p class="f__hint" id="h-owner_name">Hakkımızda sayfasında görünür.</p>
+  <input id="f-owner_name" name="owner_name" type="text" value="Alaattin Topçu" maxlength="120"
+    aria-describedby="h-owner_name"  >
+</div>
+
+    
+<div class="f">
+  <label for="f-tagline">Kısa slogan</label>
+  <p class="f__hint" id="h-tagline">İsteğe bağlı. Yazarsanız sayfanın altında ve Hakkımızda sayfasında görünür; boş bırakabilirsiniz.</p>
+  <input id="f-tagline" name="tagline" type="text" value="" maxlength="160"
+    aria-describedby="h-tagline"  >
+</div>
+
+    
+<div class="f">
+  <label for="f-about">Hakkımızda yazısı</label>
+  <p class="f__hint" id="h-about">Paragraflar arasında bir satır boş bırakın.</p>
+  <textarea id="f-about" name="about" rows="12" maxlength="20000" aria-describedby="h-about">Kekeme Yayınları, kolay söylenemeyeni söylemeye cesaret eden kitapların yayınevidir.
+
+Kekemelik bir eksiklik değil, sözün değerini bilmektir: her kelimeyi tartarak, hakkını vererek söylemek. Kitaplarımızı da bu özenle seçiyor, bu özenle hazırlıyoruz.
+
+Okurun zekâsına güvenen, yazarın sesine saygı duyan, çeviriyi bir sanat ve kitabı kalıcı bir eser olarak gören bir yayıncılık anlayışıyla yola çıktık. Edebiyatın insanı daha özgür, daha düşünceli ve daha duyarlı kıldığına inanıyoruz.</textarea>
+</div>
+
+    
+<div class="f">
+  <label for="f-manuscript_note">Dosya göndermek isteyen yazarlara not</label>
+  
+  <textarea id="f-manuscript_note" name="manuscript_note" rows="4" maxlength="3000" >Dosya göndermek isteyen yazarlarımız, kısa bir tanıtım ve ilk otuz sayfayla birlikte e-posta adresimize yazabilir.</textarea>
+</div>
+
+  </fieldset>
+  <fieldset class="step">
+    <legend><span class="step__n">2</span> İletişim bilgileri</legend>
+    
+<div class="f">
+  <label for="f-address">Adres</label>
+  
+  <textarea id="f-address" name="address" rows="3" maxlength="300" ></textarea>
+</div>
+
+    
+<div class="f">
+  <label for="f-email">E-posta</label>
+  
+  <input id="f-email" name="email" type="email" value="" maxlength="200"
+      >
+</div>
+
+    
+<div class="f">
+  <label for="f-phone">Telefon</label>
+  
+  <input id="f-phone" name="phone" type="tel" value="" maxlength="40"
+      >
+</div>
+
+    
+<div class="f">
+  <label for="f-company_name">Resmî unvan</label>
+  <p class="f__hint" id="h-company_name">KVKK metninde ve sayfanın en altında görünür.</p>
+  <input id="f-company_name" name="company_name" type="text" value="Kekeme Yayınları" maxlength="200"
+    aria-describedby="h-company_name"  >
+</div>
+
+  </fieldset>
+  <fieldset class="step">
+    <legend><span class="step__n">3</span> Sosyal medya</legend>
+    <p class="f__hint">Hesabınızın tam adresini yapıştırın. Boş bırakılanlar görünmez.</p>
+    
+<div class="f">
+  <label for="f-instagram">Instagram</label>
+  
+  <input id="f-instagram" name="instagram" type="url" value="" maxlength="300"
+      placeholder="https://instagram.com/...">
+</div>
+
+    
+<div class="f">
+  <label for="f-twitter">X / Twitter</label>
+  
+  <input id="f-twitter" name="twitter" type="url" value="" maxlength="300"
+      >
+</div>
+
+    
+<div class="f">
+  <label for="f-youtube">YouTube</label>
+  
+  <input id="f-youtube" name="youtube" type="url" value="" maxlength="300"
+      >
+</div>
+
+  </fieldset>
+  <fieldset class="step">
+    <legend><span class="step__n">4</span> Google’da görünüm</legend>
+    
+<div class="f">
+  <label for="f-meta_description">Google’da görünecek kısa tanıtım</label>
+  <p class="f__hint" id="h-meta_description">Google aramalarında sitenizin adının altında çıkan 1–2 cümle. Boş bırakırsanız biz yazarız. En fazla 160 harf.</p>
+  <textarea id="f-meta_description" name="meta_description" rows="3" maxlength="300" aria-describedby="h-meta_description"></textarea>
+</div>
+
+  </fieldset>
+  <fieldset class="step">
+    <legend><span class="step__n">5</span> Bildirimler ve hatırlatmalar</legend>
+    
+<div class="f">
+  <label for="f-notify_email">Yeni mesajlar hangi e-postaya bildirilsin?</label>
+  <p class="f__hint" id="h-notify_email">Boş bırakırsanız yukarıdaki iletişim e-postasına gelir.</p>
+  <input id="f-notify_email" name="notify_email" type="email" value="" maxlength="254"
+    aria-describedby="h-notify_email"  >
+</div>
+
+    
+<div class="f">
+  <label for="f-domain_name">Alan adınız</label>
+  <p class="f__hint" id="h-domain_name">Örn. kekemeyayinlari.com</p>
+  <input id="f-domain_name" name="domain_name" type="text" value="" maxlength="120"
+    aria-describedby="h-domain_name"  >
+</div>
+
+    
+<div class="f">
+  <label for="f-domain_expiry">Alan adının bitiş tarihi</label>
+  <p class="f__hint" id="h-domain_expiry">Alan adını aldığınız firmanın sitesinde yazar. Süre dolmadan 60 gün önce panel sizi uyarır.</p>
+  <input id="f-domain_expiry" name="domain_expiry" type="date" value="" maxlength="10"
+    aria-describedby="h-domain_expiry"  >
+</div>
+
+    
+<div class="f">
+  <label for="f-hosting_expiry">Sunucu ödemesinin yenilenme tarihi</label>
+  <p class="f__hint" id="h-hosting_expiry">Yıllık ödüyorsanız yazın; 30 gün önce hatırlatılır.</p>
+  <input id="f-hosting_expiry" name="hosting_expiry" type="date" value="" maxlength="10"
+    aria-describedby="h-hosting_expiry"  >
+</div>
+
+  </fieldset>
+  <fieldset class="step">
+    <legend><span class="step__n">6</span> Teknik destek <span class="f__hint">(isteğe bağlı)</span></legend>
+    <p class="f__hint">Yazarsanız panelde “Yardım” sayfasında tek dokunuşla aranabilir.</p>
+    
+<div class="f">
+  <label for="f-support_name">Teknik sorumlunun adı</label>
+  
+  <input id="f-support_name" name="support_name" type="text" value="" maxlength="120"
+      >
+</div>
+
+    
+<div class="f">
+  <label for="f-support_phone">Telefonu</label>
+  <p class="f__hint" id="h-support_phone">Örn. 0532 123 45 67</p>
+  <input id="f-support_phone" name="support_phone" type="tel" value="" maxlength="40"
+    aria-describedby="h-support_phone"  >
+</div>
+
+  </fieldset>
+  <div class="savebar">
+    <button class="abtn abtn--primary abtn--big" type="submit">Değişiklikleri kaydet</button>
+    <a class="abtn abtn--line" href="/kekeme-onizleme/yonetim/">Vazgeç</a>
+    <p class="savebar__draft" data-draft-status aria-live="polite"></p>
+  </div>
+</form>
+
+  </main>
+<script>
+(function(){
+  var B="/kekeme-onizleme";
+  var m=document.getElementById('demo-modal'),p=document.getElementById('demo-p');
+  function show(t){p.textContent=t;m.hidden=false;document.getElementById('demo-ok').focus();}
+  document.getElementById('demo-ok').onclick=function(){m.hidden=true;};
+  var fold=function(x){return (x||'').toLocaleLowerCase('tr-TR').replace(/[ığüşöçâîû]/g,function(c){return {'ı':'i','ğ':'g','ü':'u','ş':'s','ö':'o','ç':'c','â':'a','î':'i','û':'u'}[c];});};
+  // Arama: sayfadaki kartları/satırları süzer
+  var q=new URLSearchParams(location.search).get('ara');
+  if(q){var n=fold(q),shown=0;document.querySelectorAll('.card,.row').forEach(function(c){var ok=fold(c.textContent).indexOf(n)>=0;c.hidden=!ok;if(ok)shown++;});
+    document.querySelectorAll('input[type=search]').forEach(function(i){i.value=q;});
+    var lead=document.querySelector('.page-lead');if(lead)lead.textContent='“'+q+'” için '+shown+' sonuç.';}
+  document.addEventListener('submit',function(e){
+    var f=e.target;if(f.closest('#demo-modal'))return;
+    var a=f.getAttribute('action')||'';var get=(f.getAttribute('method')||'get').toLowerCase()==='get';
+    if(get){e.preventDefault();e.stopImmediatePropagation();var v=(f.querySelector('input[type=search]')||{}).value||'';
+      var dest=a.indexOf('/yonetim')===0?a:'/kitaplar';location.href=B+dest+'/?ara='+encodeURIComponent(v);return;}
+    e.preventDefault();e.stopImmediatePropagation();
+    if(a.indexOf('/yonetim/giris')===0){location.href=B+'/yonetim/';return;}
+    if(a.indexOf('/yonetim/cikis')===0){location.href=B+'/yonetim/giris/';return;}
+    if(a==='/iletisim'||a==='/bulten'){show('Gerçek sitede bu form gönderilir ve mesaj yönetim paneline düşer. Önizlemede gönderilmez.');return;}
+    show('Gerçek sitede bu düğme kaydeder. Önizlemede değişiklik kaydedilmez; dilediğiniz gibi deneyebilirsiniz.');
+  },true);
+})();
+</script>
+</body>
+</html>

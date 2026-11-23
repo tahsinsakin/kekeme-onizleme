@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yedekler · Yönetim · Kekeme Yayınları</title>
+  <link rel="icon" href="/kekeme-onizleme/static/img/favicon-64.png" type="image/png">
+  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css">
+  <script src="/kekeme-onizleme/static/js/admin.js" defer></script>
+
+<style>
+.demo-bar{position:relative;z-index:60;display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;background:#9f1616;color:#fff;padding:10px 16px;font:500 15px/1.3 "Instrument Sans",system-ui,sans-serif;text-align:center}
+.demo-bar a{background:#fff;color:#1c1a17!important;text-decoration:none;font-weight:700;padding:9px 14px;border-radius:10px;white-space:nowrap}
+.demo-modal{position:fixed;inset:0;z-index:1001;background:rgba(20,18,15,.55);display:grid;place-items:center;padding:20px}
+.demo-modal[hidden]{display:none}
+.demo-modal div{background:#fff;color:#161512;border-radius:18px;padding:28px;max-width:460px;font:400 18px/1.5 "Instrument Sans",system-ui,sans-serif}
+.demo-modal h2{font:500 26px/1.2 "Fraunces",Georgia,serif;margin:0 0 10px}
+.demo-modal button{font:700 18px/1 "Instrument Sans",sans-serif;background:#161512;color:#fff;border:0;border-radius:10px;padding:16px 26px;cursor:pointer;margin-top:16px}
+</style>
+</head>
+<body class="adm" >
+<div class="demo-bar" role="region" aria-label="Önizleme"><span><b>Önizleme</b> · Değişiklikler kaydedilmez</span><a href="/kekeme-onizleme/">Siteye dön →</a></div>
+<div class="demo-modal" id="demo-modal" hidden role="dialog" aria-modal="true"><div><h2>Bu bir önizleme</h2><p id="demo-p"></p><button type="button" id="demo-ok">Tamam</button></div></div>
+  <a class="adm-skip" href="#icerik">İçeriğe geç</a>
+  
+  <header class="adm-top">
+    <div class="adm-top__row">
+      <a class="adm-brand" href="/kekeme-onizleme/yonetim/"><img src="/kekeme-onizleme/static/img/logo-acik.png" alt="" width="40" height="37">Kekeme Yayınları <span>Yönetim</span></a>
+      <div class="adm-top__tools">
+        <a class="adm-top__link adm-top__help" href="/kekeme-onizleme/yonetim/yardim/" ><span aria-hidden="true">?</span> Yardım</a>
+        <button type="button" class="adm-textsize" data-textsize>Yazı boyu: Normal</button>
+        <a class="adm-top__link" href="/kekeme-onizleme/" target="_blank" rel="noopener">Sitede gör ↗</a>
+        <form method="post" action="/yonetim/cikis">
+          <input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA">
+          <button class="adm-top__link adm-top__logout" type="submit">Çıkış</button>
+        </form>
+      </div>
+    </div>
+    <nav class="adm-nav" aria-label="Yönetim menüsü">
+      <a href="/kekeme-onizleme/yonetim/" >Ana Sayfa</a>
+      <a href="/kekeme-onizleme/yonetim/kitaplar/" >Kitaplar</a>
+      <a href="/kekeme-onizleme/yonetim/yazarlar/" >Yazarlar</a>
+      <a href="/kekeme-onizleme/yonetim/haberler/" >Haber ve Etkinlik</a>
+      <a href="/kekeme-onizleme/yonetim/mesajlar/" >Mesajlar</a>
+    </nav>
+  </header>
+  
+
+  <main class="adm-main " id="icerik">
+    <div class="adm-session" role="alert" data-session-lost hidden>
+      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/" target="_blank">Buraya dokunup yeniden giriş yapın</a>, sonra bu sayfaya dönüp kaydedin.</p>
+    </div>
+    
+    
+    
+<p class="back"><a href="/kekeme-onizleme/yonetim/">← Ana sayfaya dön</a></p>
+<h1 class="adm-h1">Yedekler</h1>
+<p class="lead">Site her gün <strong>kendiliğinden</strong> yedeklenir ve son 30 günün yedeği saklanır. Sizin bir şey yapmanız gerekmez.</p>
+<p class="status status--ok">✓ Son yedek: bugün (23 Kasım 2026).</p>
+
+<form method="post" action="/yonetim/yedek/simdi" class="links links--spaced">
+  <input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA">
+  <button class="abtn abtn--primary abtn--big" type="submit">Şimdi yedek al</button>
+</form>
+
+<section class="panel">
+  <h2 class="adm-h2">Önceki günlere dönmek</h2>
+  <p>Bir şeyler ters gittiyse (ör. yanlışlıkla çok şey silindiyse), siteyi aşağıdaki günlerden birinin hâline döndürebilirsiniz. Tek bir kitabı eski hâline döndürmek için bunun yerine o kitabın sayfasındaki <strong>“Değişiklik geçmişi”</strong>ni kullanın.</p>
+  
+  <ul class="rows">
+    
+    <li class="row">
+      <span class="row__main"><strong class="row__title">23 Kasım 2026</strong><span class="row__sub">Günlük otomatik yedek · 112 KB · en yeni</span></span>
+      <span class="row__actions">
+        <form method="post" action="/yonetim/yedek/indir"><input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA"><input type="hidden" name="file" value="kekeme-2026-11-23.db"><button class="abtn abtn--line" type="submit">Bilgisayarıma indir</button></form>
+        <a class="abtn abtn--danger" href="/kekeme-onizleme/yonetim/yedek/geri/kekeme-2026-11-23.db/">Bu güne döndür</a>
+      </span>
+    </li>
+    
+  </ul>
+  
+</section>
+
+  </main>
+<script>
+(function(){
+  var B="/kekeme-onizleme";
+  var m=document.getElementById('demo-modal'),p=document.getElementById('demo-p');
+  function show(t){p.textContent=t;m.hidden=false;document.getElementById('demo-ok').focus();}
+  document.getElementById('demo-ok').onclick=function(){m.hidden=true;};
+  var fold=function(x){return (x||'').toLocaleLowerCase('tr-TR').replace(/[ığüşöçâîû]/g,function(c){return {'ı':'i','ğ':'g','ü':'u','ş':'s','ö':'o','ç':'c','â':'a','î':'i','û':'u'}[c];});};
+  // Arama: sayfadaki kartları/satırları süzer
+  var q=new URLSearchParams(location.search).get('ara');
+  if(q){var n=fold(q),shown=0;document.querySelectorAll('.card,.row').forEach(function(c){var ok=fold(c.textContent).indexOf(n)>=0;c.hidden=!ok;if(ok)shown++;});
+    document.querySelectorAll('input[type=search]').forEach(function(i){i.value=q;});
+    var lead=document.querySelector('.page-lead');if(lead)lead.textContent='“'+q+'” için '+shown+' sonuç.';}
+  document.addEventListener('submit',function(e){
+    var f=e.target;if(f.closest('#demo-modal'))return;
+    var a=f.getAttribute('action')||'';var get=(f.getAttribute('method')||'get').toLowerCase()==='get';
+    if(get){e.preventDefault();e.stopImmediatePropagation();var v=(f.querySelector('input[type=search]')||{}).value||'';
+      var dest=a.indexOf('/yonetim')===0?a:'/kitaplar';location.href=B+dest+'/?ara='+encodeURIComponent(v);return;}
+    e.preventDefault();e.stopImmediatePropagation();
+    if(a.indexOf('/yonetim/giris')===0){location.href=B+'/yonetim/';return;}
+    if(a.indexOf('/yonetim/cikis')===0){location.href=B+'/yonetim/giris/';return;}
+    if(a==='/iletisim'||a==='/bulten'){show('Gerçek sitede bu form gönderilir ve mesaj yönetim paneline düşer. Önizlemede gönderilmez.');return;}
+    show('Gerçek sitede bu düğme kaydeder. Önizlemede değişiklik kaydedilmez; dilediğiniz gibi deneyebilirsiniz.');
+  },true);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yardım · Yönetim · Kekeme Yayınları</title>
+  <link rel="icon" href="/kekeme-onizleme/static/img/favicon-64.png" type="image/png">
+  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css">
+  <script src="/kekeme-onizleme/static/js/admin.js" defer></script>
+
+<style>
+.demo-bar{position:relative;z-index:60;display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;background:#9f1616;color:#fff;padding:10px 16px;font:500 15px/1.3 "Instrument Sans",system-ui,sans-serif;text-align:center}
+.demo-bar a{background:#fff;color:#1c1a17!important;text-decoration:none;font-weight:700;padding:9px 14px;border-radius:10px;white-space:nowrap}
+.demo-modal{position:fixed;inset:0;z-index:1001;background:rgba(20,18,15,.55);display:grid;place-items:center;padding:20px}
+.demo-modal[hidden]{display:none}
+.demo-modal div{background:#fff;color:#161512;border-radius:18px;padding:28px;max-width:460px;font:400 18px/1.5 "Instrument Sans",system-ui,sans-serif}
+.demo-modal h2{font:500 26px/1.2 "Fraunces",Georgia,serif;margin:0 0 10px}
+.demo-modal button{font:700 18px/1 "Instrument Sans",sans-serif;background:#161512;color:#fff;border:0;border-radius:10px;padding:16px 26px;cursor:pointer;margin-top:16px}
+</style>
+</head>
+<body class="adm" >
+<div class="demo-bar" role="region" aria-label="Önizleme"><span><b>Önizleme</b> · Değişiklikler kaydedilmez</span><a href="/kekeme-onizleme/">Siteye dön →</a></div>
+<div class="demo-modal" id="demo-modal" hidden role="dialog" aria-modal="true"><div><h2>Bu bir önizleme</h2><p id="demo-p"></p><button type="button" id="demo-ok">Tamam</button></div></div>
+  <a class="adm-skip" href="#icerik">İçeriğe geç</a>
+  
+  <header class="adm-top">
+    <div class="adm-top__row">
+      <a class="adm-brand" href="/kekeme-onizleme/yonetim/"><img src="/kekeme-onizleme/static/img/logo-acik.png" alt="" width="40" height="37">Kekeme Yayınları <span>Yönetim</span></a>
+      <div class="adm-top__tools">
+        <a class="adm-top__link adm-top__help" href="/kekeme-onizleme/yonetim/yardim/" aria-current="page"><span aria-hidden="true">?</span> Yardım</a>
+        <button type="button" class="adm-textsize" data-textsize>Yazı boyu: Normal</button>
+        <a class="adm-top__link" href="/kekeme-onizleme/" target="_blank" rel="noopener">Sitede gör ↗</a>
+        <form method="post" action="/yonetim/cikis">
+          <input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA">
+          <button class="adm-top__link adm-top__logout" type="submit">Çıkış</button>
+        </form>
+      </div>
+    </div>
+    <nav class="adm-nav" aria-label="Yönetim menüsü">
+      <a href="/kekeme-onizleme/yonetim/" >Ana Sayfa</a>
+      <a href="/kekeme-onizleme/yonetim/kitaplar/" >Kitaplar</a>
+      <a href="/kekeme-onizleme/yonetim/yazarlar/" >Yazarlar</a>
+      <a href="/kekeme-onizleme/yonetim/haberler/" >Haber ve Etkinlik</a>
+      <a href="/kekeme-onizleme/yonetim/mesajlar/" >Mesajlar</a>
+    </nav>
+  </header>
+  
+
+  <main class="adm-main " id="icerik">
+    <div class="adm-session" role="alert" data-session-lost hidden>
+      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/" target="_blank">Buraya dokunup yeniden giriş yapın</a>, sonra bu sayfaya dönüp kaydedin.</p>
+    </div>
+    
+    
+    
+<h1 class="adm-h1">Yardım</h1>
+<p class="lead">Bir yerde takıldıysanız aşağıya bakın. Hiçbir şeyi kalıcı olarak bozamazsınız: sildikleriniz 90 gün çöp kutusunda bekler, her değişikliğin eski hâli saklanır, site her gün kendiliğinden yedeklenir.</p>
+
+
+
+<section class="panel panel--quiet">
+  <h2 class="adm-h2">Yazdırılabilir kullanım kartları</h2>
+  <p>En sık yapılan 12 işin her biri için ekran görüntülü, tek sayfalık kart. Yazdırıp masanızda tutabilirsiniz.</p>
+  <a class="abtn abtn--primary abtn--big" href="/kekeme-onizleme/static/kullanim-kartlari.pdf" target="_blank" rel="noopener">📄 Kullanım kartlarını aç</a>
+</section>
+
+<div class="faq">
+  <details class="faq__item" open>
+    <summary>Yeni bir kitabı nasıl eklerim?</summary>
+    <ol>
+      <li>Ana sayfada siyah <strong>“Yeni bir kitap ekleyeceğim”</strong> kutusuna basın.</li>
+      <li>Her ekranda tek bir soru çıkar. Cevabı yazın ve <strong>İleri</strong>’ye basın. Bilmiyorsanız boş bırakıp yine <strong>İleri</strong> deyin.</li>
+      <li>Sağ tarafta kitabın sitede nasıl görüneceğini o anda görürsünüz.</li>
+      <li>Son adımda <strong>“Kitabı ekle”</strong> düğmesine basın. Yeşil kutu çıktıysa tamamdır.</li>
+    </ol>
+  </details>
+  <details class="faq__item">
+    <summary>Bir kitabın fiyatını nasıl değiştiririm?</summary>
+    <ol>
+      <li>Üstteki menüden <strong>Kitaplar</strong>’a basın.</li>
+      <li>Kitabın yanındaki <strong>Düzenle</strong> düğmesine basın.</li>
+      <li><strong>Fiyat</strong> kutusundaki yazıyı silip yenisini yazın.</li>
+      <li>En alttaki <strong>Değişiklikleri kaydet</strong> düğmesine basın.</li>
+    </ol>
+  </details>
+  <details class="faq__item">
+    <summary>Kapak fotoğrafını nasıl koyarım?</summary>
+    <p>Kitabın sayfasında <strong>Fotoğraf seç</strong> düğmesine basın ve bilgisayarınızdaki ya da telefonunuzdaki fotoğrafı seçin. Telefondaysanız o anda fotoğraf da çekebilirsiniz. Boyutunu ya da biçimini dert etmeyin, site kendisi düzeltir.</p>
+  </details>
+  <details class="faq__item">
+    <summary>Yanlışlıkla bir şey sildim, ne yapmalıyım?</summary>
+    <p>Sildikten hemen sonra yeşil kutudaki <strong>Geri al</strong> düğmesine basın. Kutu kapandıysa: <a href="/kekeme-onizleme/yonetim/cop-kutusu/">Çöp kutusu</a> → <strong>Geri al</strong>.</p>
+  </details>
+  <details class="faq__item">
+    <summary>Yazdıklarım kayboldu mu?</summary>
+    <p>Hayır. Siz yazarken her şey bu bilgisayarda kendiliğinden saklanır. Aynı sayfayı tekrar açtığınızda sarı bir kutu çıkar; <strong>Taslağı geri getir</strong> düğmesine basın.</p>
+  </details>
+  <details class="faq__item">
+    <summary>Yazılar çok küçük</summary>
+    <p>Sağ üstteki <strong>Yazı boyu</strong> düğmesine basın. Her basışta büyür: Normal → Büyük → Çok büyük. Bilgisayar seçiminizi hatırlar.</p>
+  </details>
+  <details class="faq__item">
+    <summary>Şifremi unuttum</summary>
+    <ol>
+      <li>Giriş sayfasında <strong>Şifremi unuttum</strong> düğmesine basın.</li>
+      <li><strong>Kurtarma kartınızdaki</strong> kodlardan birini ve yeni şifrenizi yazın. Kodun üstünü çizin; her kod bir kez kullanılır.</li>
+      
+    </ol>
+    <p>Kartınız kalmadıysa ya da kaybolduysa: giriş yapabildiğiniz bir anda <a href="/kekeme-onizleme/yonetim/hesabim/#kodlar">Hesabım</a> sayfasından yenisini yazdırın.</p>
+  </details>
+  <details class="faq__item">
+    <summary>Bir kitabı eski hâline döndürmek istiyorum</summary>
+    <p>Kitabın düzenleme sayfasının en altında <strong>Değişiklik geçmişi</strong> vardır. Açın, istediğiniz saatin yanındaki <strong>Bu hâline döndür</strong> düğmesine basın.</p>
+  </details>
+  <details class="faq__item">
+    <summary>Her şey bozuldu, siteyi dünkü hâline döndürmek istiyorum</summary>
+    <p><a href="/kekeme-onizleme/yonetim/yedek/">Yedekler</a> sayfasında son 30 günün yedeği durur. İstediğiniz günün yanındaki <strong>Bu güne döndür</strong> düğmesine basın. Bugünkü hâl de ayrıca saklanır, yani bu işlem de geri alınabilir.</p>
+  </details>
+  <details class="faq__item">
+    <summary>Bülten abonelerini ne yapmalıyım?</summary>
+    <p>Yeni abone olduğunda ana sayfada hatırlatma çıkar. <a href="/kekeme-onizleme/yonetim/aboneler/">Bülten aboneleri</a> sayfasındaki 3 adımı izleyin: listeyi indirin, İYS’ye yükleyin, “Ekledim” deyin.</p>
+  </details>
+  <details class="faq__item" id="ornek" open>
+    <summary>Örnek (tanıtım) kitapları nasıl kaldırırım?</summary>
+    
+    <p>Sitede şu an tanıtım için konmuş örnek kitaplar, yazarlar ve haberler var. Kendi kitaplarınızı eklemeye başlamadan önce kaldırın. <strong>Sizin eklediğiniz hiçbir şey silinmez.</strong></p>
+    <form method="post" action="/yonetim/ornek-sil" data-confirm="Örnek kitaplar, yazarlar ve haberler kalıcı olarak silinecek. Sizin eklediklerinize dokunulmaz. Devam edilsin mi?"><input type="hidden" name="_csrf" value="CG8viB13pAYKO6pff669AlemUQEMcWbX5GES74KaciA"><button class="abtn abtn--danger abtn--big" type="submit">Örnek içeriği kaldır</button></form>
+    
+  </details>
+</div>
+
+  </main>
+<script>
+(function(){
+  var B="/kekeme-onizleme";
+  var m=document.getElementById('demo-modal'),p=document.getElementById('demo-p');
+  function show(t){p.textContent=t;m.hidden=false;document.getElementById('demo-ok').focus();}
+  document.getElementById('demo-ok').onclick=function(){m.hidden=true;};
+  var fold=function(x){return (x||'').toLocaleLowerCase('tr-TR').replace(/[ığüşöçâîû]/g,function(c){return {'ı':'i','ğ':'g','ü':'u','ş':'s','ö':'o','ç':'c','â':'a','î':'i','û':'u'}[c];});};
+  // Arama: sayfadaki kartları/satırları süzer
+  var q=new URLSearchParams(location.search).get('ara');
+  if(q){var n=fold(q),shown=0;document.querySelectorAll('.card,.row').forEach(function(c){var ok=fold(c.textContent).indexOf(n)>=0;c.hidden=!ok;if(ok)shown++;});
+    document.querySelectorAll('input[type=search]').forEach(function(i){i.value=q;});
+    var lead=document.querySelector('.page-lead');if(lead)lead.textContent='“'+q+'” için '+shown+' sonuç.';}
+  document.addEventListener('submit',function(e){
+    var f=e.target;if(f.closest('#demo-modal'))return;
+    var a=f.getAttribute('action')||'';var get=(f.getAttribute('method')||'get').toLowerCase()==='get';
+    if(get){e.preventDefault();e.stopImmediatePropagation();var v=(f.querySelector('input[type=search]')||{}).value||'';
+      var dest=a.indexOf('/yonetim')===0?a:'/kitaplar';location.href=B+dest+'/?ara='+encodeURIComponent(v);return;}
+    e.preventDefault();e.stopImmediatePropagation();
+    if(a.indexOf('/yonetim/giris')===0){location.href=B+'/yonetim/';return;}
+    if(a.indexOf('/yonetim/cikis')===0){location.href=B+'/yonetim/giris/';return;}
+    if(a==='/iletisim'||a==='/bulten'){show('Gerçek sitede bu form gönderilir ve mesaj yönetim paneline düşer. Önizlemede gönderilmez.');return;}
+    show('Gerçek sitede bu düğme kaydeder. Önizlemede değişiklik kaydedilmez; dilediğiniz gibi deneyebilirsiniz.');
+  },true);
+})();
+</script>
+</body>
+</html>
