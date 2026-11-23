@@ -1,4 +1,11 @@
 /* Kekeme — yönetim paneli. Büyük yazı, büyük düğmeler, yüksek karşıtlık. */
+/* Logo yazısı: Libre Caslon Text, kalın (SIL OFL) */
+@font-face { font-family: "Libre Caslon Text"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url(/kekeme-onizleme/static/fonts/libre-caslon-text-latin-ext-700-normal.woff2) format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Libre Caslon Text"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url(/kekeme-onizleme/static/fonts/libre-caslon-text-latin-700-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
 @font-face { font-family: "Instrument Sans"; font-weight: 400 700; font-display: swap;
   src: url(/kekeme-onizleme/static/fonts/instrument-sans-latin-ext-wght-normal.woff2) format("woff2");
   unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
@@ -31,7 +38,7 @@ img { max-width: 100%; display: block; }
 /* Üst çubuk */
 .adm-top { background: var(--ink); color: #fff; }
 .adm-top__row { max-width: 1100px; margin: 0 auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-.adm-brand { font: 500 1.3rem/1 "Fraunces", Georgia, serif; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+.adm-brand { font: 700 1.3rem/1 "Libre Caslon Text", Georgia, serif; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
 .adm-brand img { width: 40px; height: auto; }
 .adm-brand span { font: 600 .7rem/1 "Instrument Sans", sans-serif; letter-spacing: .18em; text-transform: uppercase; color: #f19a8f; margin-left: 8px; }
 .adm-brand--big { color: var(--ink); font-size: 1.6rem; margin: 0 0 32px; }
