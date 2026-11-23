@@ -137,7 +137,7 @@ a:hover { color: var(--accent); }
 /* ---------- Ortak tipografi ---------- */
 .eyebrow { font: 600 .75rem/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
 .eyebrow a { text-decoration: none; }
-.page-head { padding: clamp(40px, 7vw, 88px) 0 clamp(24px, 4vw, 40px); }
+.page-head { padding: clamp(32px, 5vw, 64px) 0 clamp(20px, 3vw, 32px); }
 .page-head--big { padding-bottom: clamp(32px, 5vw, 56px); }
 .page-title { font: 400 clamp(2.4rem, 5.4vw, 4.2rem)/1.12 var(--serif-display); letter-spacing: -.005em; margin: 0 0 14px; }
 .page-title--xl { font-size: clamp(2.6rem, 6.6vw, 5.4rem); font-style: italic; }
@@ -210,7 +210,7 @@ a:hover { color: var(--accent); }
 .hero__actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin: 0; }
 .hero--empty { padding: clamp(28px, 4vw, 48px) 0; }
 .hero--empty .hero__title { font-style: italic; max-width: 18ch; }
-.section.section--first { padding-top: clamp(24px, 2.4vw, 32px); }
+.section.section--first { padding-top: clamp(24px, 2.4vw, 32px); padding-bottom: clamp(32px, 4vw, 48px); }
 .section--first .section__head.section__head { margin-bottom: clamp(20px, 2.4vw, 32px); }
 @media (max-width: 680px) {
   .hero { padding: 18px 0 22px; }
@@ -226,10 +226,10 @@ a:hover { color: var(--accent); }
 }
 
 /* ---------- Bölümler ---------- */
-.section { padding: clamp(48px, 7vw, 96px) 0; }
+.section { padding: clamp(40px, 5vw, 64px) 0; }
 .section--tight { padding-top: 8px; }
 .section--rule { border-top: 1px solid var(--rule); }
-.section__head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: clamp(24px, 4vw, 44px);
+.section__head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: clamp(20px, 3vw, 32px);
   border-bottom: 1px solid var(--ink); padding-bottom: 14px; }
 .section__title { font: 400 clamp(1.7rem, 3vw, 2.4rem)/1.1 var(--serif-display); letter-spacing: -.005em; margin: 0; }
 
@@ -257,6 +257,7 @@ a:hover { color: var(--accent); }
 .section--ink .section__head { border-color: rgba(243,238,228,.5); }
 .section--ink a:hover { color: #f19a8f; }
 .soon { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 32px; }
+@media (max-width: 680px) { .soon { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; } }
 .soon__item a { text-decoration: none; display: grid; gap: 10px; }
 .soon__date { font: 600 .74rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #f19a8f; border-top: 1px solid rgba(243,238,228,.35); padding-top: 12px; }
 .soon__cover { max-width: 150px; }
@@ -265,9 +266,9 @@ a:hover { color: var(--accent); }
 
 /* Sayfadan */
 .excerpt { background: var(--paper-2); }
-.excerpt__grid { max-width: 980px; }
+.excerpt__grid { max-width: 860px; }
 .excerpt__quote { margin: 0; }
-.excerpt__quote p { font: 300 italic clamp(1.6rem, 3.4vw, 2.6rem)/1.3 var(--serif-display); letter-spacing: -.005em; margin: 0 0 28px; text-wrap: pretty; }
+.excerpt__quote p { font: 400 italic clamp(1.3rem, 2.2vw, 1.75rem)/1.4 var(--serif-display); letter-spacing: 0; margin: 0 0 20px; text-wrap: pretty; }
 .excerpt__quote p::before { content: "“"; color: var(--accent); margin-left: -.45em; }
 .excerpt__quote footer { font: 500 1rem/1.4 var(--sans); }
 .excerpt__quote cite { font-style: normal; border-bottom: 1px solid var(--accent); }
@@ -289,7 +290,7 @@ a:hover { color: var(--accent); }
 .post__place { font: 500 .85rem/1.3 var(--sans); color: var(--muted); margin: auto 0 0; padding-top: 8px; }
 
 /* Bülten bandı */
-.newsband { background: var(--accent); color: var(--paper); padding: clamp(36px, 5vw, 56px) 0; }
+.newsband { background: var(--accent); color: var(--paper); padding: clamp(28px, 4vw, 44px) 0; }
 .no-newsband .newsband { display: none; }
 .newsband__row { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 .newsband__title { font: 400 clamp(1.6rem, 3vw, 2.3rem)/1.15 var(--serif-display); margin: 0 0 6px; letter-spacing: -.005em; }
