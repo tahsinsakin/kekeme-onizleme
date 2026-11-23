@@ -1,22 +1,28 @@
-/* Kekeme — yönetim paneli. Büyük yazı, büyük düğmeler, yüksek karşıtlık. */
-/* Logo yazısı: Libre Caslon Text, kalın (SIL OFL) */
+/* Başlık yazısı: Libre Caslon Text (SIL OFL) — normal, eğik ve kalın */
+@font-face { font-family: "Libre Caslon Text"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(/kekeme-onizleme/static/fonts/libre-caslon-text-latin-ext-400-normal.woff2) format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Libre Caslon Text"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(/kekeme-onizleme/static/fonts/libre-caslon-text-latin-400-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Libre Caslon Text"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url(/kekeme-onizleme/static/fonts/libre-caslon-text-latin-ext-400-italic.woff2) format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Libre Caslon Text"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url(/kekeme-onizleme/static/fonts/libre-caslon-text-latin-400-italic.woff2) format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
 @font-face { font-family: "Libre Caslon Text"; font-style: normal; font-weight: 700; font-display: swap;
   src: url(/kekeme-onizleme/static/fonts/libre-caslon-text-latin-ext-700-normal.woff2) format("woff2");
   unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
 @font-face { font-family: "Libre Caslon Text"; font-style: normal; font-weight: 700; font-display: swap;
   src: url(/kekeme-onizleme/static/fonts/libre-caslon-text-latin-700-normal.woff2) format("woff2");
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+/* Kekeme — yönetim paneli. Büyük yazı, büyük düğmeler, yüksek karşıtlık. */
 @font-face { font-family: "Instrument Sans"; font-weight: 400 700; font-display: swap;
   src: url(/kekeme-onizleme/static/fonts/instrument-sans-latin-ext-wght-normal.woff2) format("woff2");
   unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
 @font-face { font-family: "Instrument Sans"; font-weight: 400 700; font-display: swap;
   src: url(/kekeme-onizleme/static/fonts/instrument-sans-latin-wght-normal.woff2) format("woff2");
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
-@font-face { font-family: "Fraunces"; font-weight: 100 900; font-display: swap;
-  src: url(/kekeme-onizleme/static/fonts/fraunces-latin-ext-opsz-normal.woff2) format("woff2");
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
-@font-face { font-family: "Fraunces"; font-weight: 100 900; font-display: swap;
-  src: url(/kekeme-onizleme/static/fonts/fraunces-latin-opsz-normal.woff2) format("woff2");
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
 
 :root {
@@ -61,7 +67,7 @@ img { max-width: 100%; display: block; }
 .adm-count { display: inline-grid; place-items: center; min-width: 1.5em; height: 1.5em; padding: 0 .35em; border-radius: 99px; background: #f19a8f; color: var(--ink); font-size: .75rem; margin-left: 4px; }
 
 .adm-main { max-width: 1100px; margin: 0 auto; padding: 36px 24px 120px; }
-.adm-h1 { font: 500 2rem/1.15 "Fraunces", Georgia, serif; margin: 0 0 10px; letter-spacing: -.01em; }
+.adm-h1 { font: 500 2rem/1.15 "Libre Caslon Text", Georgia, serif; margin: 0 0 10px; letter-spacing: -.01em; }
 .lead { font-size: 1.05rem; color: var(--muted); margin: 0 0 28px; max-width: 46em; }
 .back { margin: 0 0 18px; }
 .back a { font-weight: 600; display: inline-block; padding: 8px 0; }
@@ -127,7 +133,7 @@ img { max-width: 100%; display: block; }
 .row__thumb img { width: 100%; height: 100%; object-fit: cover; }
 .row__thumb--round { width: 72px; height: 72px; border-radius: 50%; }
 .nothumb { font-size: .65rem; color: var(--muted); text-align: center; padding: 4px; font-weight: 600; }
-.row__thumb--round .nothumb { font: 500 1.5rem/1 "Fraunces", serif; color: var(--accent); }
+.row__thumb--round .nothumb { font: 500 1.5rem/1 "Libre Caslon Text", serif; color: var(--accent); }
 .row--unread { border-color: var(--accent); }
 .dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); margin-right: 8px; }
 .pill { display: inline-block; width: max-content; font-size: .78rem; font-weight: 700; padding: 4px 10px; border-radius: 99px; margin-right: 6px; border: 2px solid; }
@@ -198,8 +204,8 @@ img { max-width: 100%; display: block; }
 .pw input { flex: 1; }
 .pw__toggle { min-height: 56px; white-space: nowrap; }
 
-.login { max-width: 520px; margin: 6vh auto 0; }
-.login h1 { font: 500 2.2rem/1.1 "Fraunces", Georgia, serif; margin: 0 0 8px; }
+.login { max-width: 480px; margin: 4vh auto 0; }
+.login h1 { font: 400 1.9rem/1.15 "Libre Caslon Text", Georgia, serif; margin: 0 0 6px; }
 .login__help { color: var(--muted); margin-top: 28px; }
 
 .confirm { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
@@ -211,7 +217,7 @@ img { max-width: 100%; display: block; }
 .message__body p { margin: 0 0 1em; }
 .f .img-pick__btn { display: inline-flex; margin: 0; min-height: 56px; font-size: 1.05rem; }
 
-.login__logo { width: 130px; height: auto; margin: 0 0 24px; }
+.login__logo { width: 84px; height: auto; margin: 0 0 14px; }
 .f__sub { font-weight: 700; font-size: 1.05rem; margin: 32px 0 6px; padding-top: 24px; border-top: 2px dashed var(--line); }
 
 /* ---------- Kolaylıklar (2. sürüm) ---------- */
@@ -257,13 +263,13 @@ img { max-width: 100%; display: block; }
 .pv-blank { width: 100%; height: 100%; padding: 14px 12px; display: flex; flex-direction: column; justify-content: space-between; color: #f3eee4; }
 .pv-blank[hidden] { display: none; }
 .pv-blank__author { font-size: .55rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
-.pv-blank__title { font: 400 1.05rem/1.1 "Fraunces", Georgia, serif; }
+.pv-blank__title { font: 400 1.05rem/1.1 "Libre Caslon Text", Georgia, serif; }
 .tone-0 { background: #9f1616; } .tone-1 { background: #2b3a36; } .tone-2 { background: #c9a227; color: #1c1a17; }
 .tone-3 { background: #4a3b5c; } .tone-4 { background: #6f7f63; } .tone-5 { background: #1c1a17; }
 .preview__status { margin: 0 0 6px; font-size: .78rem; font-weight: 700; color: var(--accent-dark); }
-.preview__title { font: 500 1.35rem/1.15 "Fraunces", Georgia, serif; margin: 0 0 4px; overflow-wrap: anywhere; }
+.preview__title { font: 500 1.35rem/1.15 "Libre Caslon Text", Georgia, serif; margin: 0 0 4px; overflow-wrap: anywhere; }
 .preview__author { margin: 0; font-size: .9rem; }
-.preview__price { margin: 10px 0 0; font: 500 1.2rem/1 "Fraunces", Georgia, serif; }
+.preview__price { margin: 10px 0 0; font: 500 1.2rem/1 "Libre Caslon Text", Georgia, serif; }
 .preview__shops { margin: 8px 0 0; font-size: .8rem; color: var(--muted); }
 .serp { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 16px 18px; font-family: Arial, sans-serif; }
 .serp__url { margin: 0 0 4px; font-size: .72rem; color: #4d5156; }
@@ -403,3 +409,18 @@ img { max-width: 100%; display: block; }
 /* Dar telefonlar ya da büyük yazı boyu: üst düğmeler 2×2 dizilir, hiçbiri ekrandan taşmaz */
 @media (max-width: 420px) { .adm-top__tools { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { html.big .adm-top__tools, html.bigger .adm-top__tools { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Giriş, şifremi unuttum, yeni şifre: alanlar birbirine yakın ve tek bakışta görünür */
+.login .lead { margin-bottom: 20px; }
+.login .aform { gap: 16px; }
+.login .f { margin: 0; }
+.login .check--big { margin: 0; padding: 12px 14px; }
+.login .check--stack small { font-size: .9rem; }
+.login__help { margin-top: 14px; }
+.login .abtn--big { min-height: 54px; }
+@media (max-width: 640px) {
+  .login { margin-top: 2vh; }
+  .login__logo { width: 64px; margin-bottom: 10px; }
+  .login h1 { font-size: 1.5rem; }
+  .pw__toggle { padding: 0 12px; font-size: .88rem; min-height: 52px; }
+}
