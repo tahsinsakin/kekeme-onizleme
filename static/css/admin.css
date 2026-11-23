@@ -28,6 +28,12 @@
 }
 html.big { font-size: 23px; }
 html.bigger { font-size: 26px; }
+/* Telefonda daha derli toplu: yazılar yine rahat okunur, ama ekranı doldurmaz */
+@media (max-width: 640px) {
+  :root { font-size: 17px; }
+  html.big { font-size: 19px; }
+  html.bigger { font-size: 21px; }
+}
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
 body.adm { margin: 0; background: var(--bg); color: var(--ink); font: 400 1rem/1.55 "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif; }
@@ -368,3 +374,32 @@ img { max-width: 100%; display: block; }
 .check--stack { align-items: flex-start; }
 .check--stack span { display: grid; gap: 4px; }
 .check--stack small { font-weight: 400; color: var(--muted); font-size: 1rem; }
+
+/* ---------------------------------------------------------------------------
+   Telefon: üst çubuk ve kartlar sıkılaştırılır. Dokunma alanları en az 44 px kalır.
+   --------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .adm-top__row { padding: 10px 14px 8px; gap: 8px; }
+  .adm-brand { font-size: 1.05rem; gap: 8px; white-space: nowrap; min-height: 44px; }
+  .adm-brand img { width: 30px; }
+  .adm-brand span { display: none; }
+  .adm-top__tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; width: 100%; }
+  .adm-top__link, .adm-textsize { font-size: .78rem; line-height: 1.15; padding: 6px 6px; min-height: 44px; border-radius: 8px; border-width: 1.5px; text-align: center; justify-content: center; overflow-wrap: anywhere; }
+  .adm-top__tools form, .adm-top__tools form .adm-top__link { width: 100%; }
+  .adm-top__help span { width: 1.25em; height: 1.25em; margin-right: 4px; }
+  /* Menü telefonda yana kaymaz: tüm bölümler (Mesajlar dahil) ekranda görünür */
+  .adm-nav { padding: 0 6px 4px; gap: 0 2px; flex-wrap: wrap; overflow: visible; }
+  .adm-nav a { padding: 11px 10px 9px; font-size: .92rem; border-bottom-width: 3px; min-height: 44px; display: inline-flex; align-items: center; }
+  .adm-main { padding: 22px 14px 90px; }
+  .adm-h1 { font-size: 1.55rem; }
+  .login h1 { font-size: 1.7rem; }
+  .lead { margin-bottom: 20px; }
+  .summary { padding: 16px 16px; margin: 12px 0 24px; font-size: 1rem; border-left-width: 6px; border-radius: 12px; }
+  .panel { padding: 18px 16px; border-radius: 12px; margin-bottom: 20px; }
+  .tile { padding: 16px; min-height: 0; border-radius: 12px; }
+  .tiles { gap: 12px; margin-bottom: 28px; }
+  .abtn { min-height: 48px; padding: 0 16px; }
+}
+/* Dar telefonlar ya da büyük yazı boyu: üst düğmeler 2×2 dizilir, hiçbiri ekrandan taşmaz */
+@media (max-width: 420px) { .adm-top__tools { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { html.big .adm-top__tools, html.bigger .adm-top__tools { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

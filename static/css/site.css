@@ -100,10 +100,16 @@ a:hover { color: var(--accent); }
 .search input { border: 0; background: transparent; font: 400 .95rem var(--sans); width: 130px; padding: 8px 4px; color: var(--ink); }
 .search input:focus { outline: none; width: 180px; }
 .search input { transition: width .2s ease; }
+/* Masaüstü: menü bağlantıları logo ile arama kutusunun arasında ortalanır */
+@media (min-width: 1101px) {
+  .nav { flex: 1; justify-content: center; }
+  .nav > a:first-child { margin-left: auto; }
+  .search { margin-left: auto; }
+}
 @media (min-width: 1101px) and (max-width: 1200px) { .search input:focus { width: 130px; } }
 /* Ad panelden uzun bir şeyle değiştirilirse menüye binmesin, sonu "…" ile kısalsın */
 .logo { min-width: 0; }
-.logo__text { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.logo__text { min-width: 0; overflow: hidden; text-overflow: ellipsis; padding: .12em 0 .24em; } /* alt boşluk: y, ı kuyrukları kesilmesin */
 .search button { border: 0; background: none; color: var(--ink); padding: 6px; cursor: pointer; }
 .menu-toggle, .menu-btn { display: none; }
 
