@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Giriş · Yönetim · Kekeme Yayınları</title>
   <link rel="icon" href="/kekeme-onizleme/static/img/favicon-64.png" type="image/png">
-  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css?v=f9d07d3552">
-  <script src="/kekeme-onizleme/static/js/admin.js?v=f9d07d3552" defer></script>
+  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css?v=3f4e5d0414">
+  <script src="/kekeme-onizleme/static/js/admin.js?v=3f4e5d0414" defer></script>
 
 <style>
 .demo-bar{position:relative;z-index:60;display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;background:#9f1616;color:#fff;padding:10px 16px;font:500 15px/1.3 "Instrument Sans",system-ui,sans-serif;text-align:center}
@@ -27,7 +27,7 @@
 
   <main class="adm-main " id="icerik">
     <div class="adm-session" role="alert" data-session-lost hidden>
-      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/" target="_blank">Buraya dokunup yeniden giriş yapın</a>, sonra bu sayfaya dönüp kaydedin.</p>
+      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/">Buraya dokunup yeniden giriş yapın</a>; aynı sayfaya döneceksiniz ve <strong>Taslağı geri getir</strong> diyerek kaldığınız yerden devam edersiniz.</p>
     </div>
     
     
@@ -40,7 +40,7 @@
   
 
   <form method="post" action="/yonetim/giris" class="aform" autocomplete="on">
-    <input type="hidden" name="_csrf" value="9aubLs_CwyQgXJxc8SnEYfJyfKmIntopfE3cpaKF5p0">
+    <input type="hidden" name="_csrf" value="AAsBWVgT76ziax8ujgOpXXlcVHk9HcWlJerx1VK0RpY">
     <input type="hidden" name="devam" value="/yonetim">
     <div class="f">
       <label for="username">Kullanıcı adı</label>
@@ -56,7 +56,7 @@
     <label class="check check--big check--stack"><input type="checkbox" name="hatirla" value="1" checked><span>Bu bilgisayarda beni hatırla<small>30 gün boyunca şifre sormaz. Ortak bilgisayardaysanız işareti kaldırın.</small></span></label>
     <button class="abtn abtn--primary abtn--big abtn--full" type="submit">Giriş yap</button>
   </form>
-  <p class="login__help"><a class="abtn abtn--line abtn--full" href="/kekeme-onizleme/yonetim/sifremi-unuttum/">Şifremi unuttum</a></p>
+  <p class="login__help"><a class="abtn abtn--line abtn--full" href="/kekeme-onizleme/yonetim/sifremi-unuttum/" data-carry-user>Şifremi unuttum</a></p>
 </div>
 
   </main>

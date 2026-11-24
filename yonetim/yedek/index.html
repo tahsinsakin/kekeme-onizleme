@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yedekler · Yönetim · Kekeme Yayınları</title>
   <link rel="icon" href="/kekeme-onizleme/static/img/favicon-64.png" type="image/png">
-  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css?v=f9d07d3552">
-  <script src="/kekeme-onizleme/static/js/admin.js?v=f9d07d3552" defer></script>
+  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css?v=3f4e5d0414">
+  <script src="/kekeme-onizleme/static/js/admin.js?v=3f4e5d0414" defer></script>
 
 <style>
 .demo-bar{position:relative;z-index:60;display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;background:#9f1616;color:#fff;padding:10px 16px;font:500 15px/1.3 "Instrument Sans",system-ui,sans-serif;text-align:center}
@@ -26,13 +26,13 @@
   
   <header class="adm-top">
     <div class="adm-top__row">
-      <a class="adm-brand" href="/kekeme-onizleme/yonetim/"><img src="/kekeme-onizleme/static/img/logo-acik.png" alt="" width="40" height="37">Kekeme Yayınları <span>Yönetim</span></a>
+      <a class="adm-brand" href="/kekeme-onizleme/yonetim/"><img src="/kekeme-onizleme/static/img/logo-acik-80.webp" alt="" width="40" height="37">Kekeme Yayınları <span>Yönetim</span></a>
       <div class="adm-top__tools">
         <a class="adm-top__link adm-top__help" href="/kekeme-onizleme/yonetim/yardim/" ><span aria-hidden="true">?</span> Yardım</a>
         <button type="button" class="adm-textsize" data-textsize>Yazı boyu: Normal</button>
         <a class="adm-top__link" href="/kekeme-onizleme/" target="_blank" rel="noopener">Sitede gör ↗</a>
         <form method="post" action="/yonetim/cikis">
-          <input type="hidden" name="_csrf" value="z8YumzfPp64eX1hBt_7W0wVd3_JGAzU_ow3CVdV9MKw">
+          <input type="hidden" name="_csrf" value="XrjqP13yBk5LFvCVlRwdeDG2aFPhMQbypXIveqQxrJE">
           <button class="adm-top__link adm-top__logout" type="submit">Çıkış</button>
         </form>
       </div>
@@ -50,7 +50,7 @@
 
   <main class="adm-main " id="icerik">
     <div class="adm-session" role="alert" data-session-lost hidden>
-      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/" target="_blank">Buraya dokunup yeniden giriş yapın</a>, sonra bu sayfaya dönüp kaydedin.</p>
+      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/">Buraya dokunup yeniden giriş yapın</a>; aynı sayfaya döneceksiniz ve <strong>Taslağı geri getir</strong> diyerek kaldığınız yerden devam edersiniz.</p>
     </div>
     
     
@@ -61,7 +61,7 @@
 <p class="status status--ok">✓ Son yedek: bugün (24 Kasım 2026).</p>
 
 <form method="post" action="/yonetim/yedek/simdi" class="links links--spaced">
-  <input type="hidden" name="_csrf" value="z8YumzfPp64eX1hBt_7W0wVd3_JGAzU_ow3CVdV9MKw">
+  <input type="hidden" name="_csrf" value="XrjqP13yBk5LFvCVlRwdeDG2aFPhMQbypXIveqQxrJE">
   <button class="abtn abtn--primary abtn--big" type="submit">Şimdi yedek al</button>
 </form>
 
@@ -74,7 +74,7 @@
     <li class="row">
       <span class="row__main"><strong class="row__title">24 Kasım 2026</strong><span class="row__sub">Günlük otomatik yedek · 128 KB · en yeni</span></span>
       <span class="row__actions">
-        <form method="post" action="/yonetim/yedek/indir"><input type="hidden" name="_csrf" value="z8YumzfPp64eX1hBt_7W0wVd3_JGAzU_ow3CVdV9MKw"><input type="hidden" name="file" value="kekeme-2026-11-24.db"><button class="abtn abtn--line" type="submit">Bilgisayarıma indir</button></form>
+        <form method="post" action="/yonetim/yedek/indir"><input type="hidden" name="_csrf" value="XrjqP13yBk5LFvCVlRwdeDG2aFPhMQbypXIveqQxrJE"><input type="hidden" name="file" value="kekeme-2026-11-24.db"><button class="abtn abtn--line" type="submit">Bilgisayarıma indir</button></form>
         <a class="abtn abtn--danger" href="/kekeme-onizleme/yonetim/yedek/geri/kekeme-2026-11-24.db/">Bu güne döndür</a>
       </span>
     </li>
@@ -82,7 +82,7 @@
     <li class="row">
       <span class="row__main"><strong class="row__title">23 Kasım 2026</strong><span class="row__sub">Günlük otomatik yedek · 120 KB</span></span>
       <span class="row__actions">
-        <form method="post" action="/yonetim/yedek/indir"><input type="hidden" name="_csrf" value="z8YumzfPp64eX1hBt_7W0wVd3_JGAzU_ow3CVdV9MKw"><input type="hidden" name="file" value="kekeme-2026-11-23.db"><button class="abtn abtn--line" type="submit">Bilgisayarıma indir</button></form>
+        <form method="post" action="/yonetim/yedek/indir"><input type="hidden" name="_csrf" value="XrjqP13yBk5LFvCVlRwdeDG2aFPhMQbypXIveqQxrJE"><input type="hidden" name="file" value="kekeme-2026-11-23.db"><button class="abtn abtn--line" type="submit">Bilgisayarıma indir</button></form>
         <a class="abtn abtn--danger" href="/kekeme-onizleme/yonetim/yedek/geri/kekeme-2026-11-23.db/">Bu güne döndür</a>
       </span>
     </li>

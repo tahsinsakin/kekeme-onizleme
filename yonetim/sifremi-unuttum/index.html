@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Şifremi unuttum · Yönetim · Kekeme Yayınları</title>
   <link rel="icon" href="/kekeme-onizleme/static/img/favicon-64.png" type="image/png">
-  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css?v=f9d07d3552">
-  <script src="/kekeme-onizleme/static/js/admin.js?v=f9d07d3552" defer></script>
+  <link rel="stylesheet" href="/kekeme-onizleme/static/css/admin.css?v=3f4e5d0414">
+  <script src="/kekeme-onizleme/static/js/admin.js?v=3f4e5d0414" defer></script>
 
 <style>
 .demo-bar{position:relative;z-index:60;display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;background:#9f1616;color:#fff;padding:10px 16px;font:500 15px/1.3 "Instrument Sans",system-ui,sans-serif;text-align:center}
@@ -27,27 +27,26 @@
 
   <main class="adm-main " id="icerik">
     <div class="adm-session" role="alert" data-session-lost hidden>
-      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/" target="_blank">Buraya dokunup yeniden giriş yapın</a>, sonra bu sayfaya dönüp kaydedin.</p>
+      <p><strong>Oturumunuz kapanmış.</strong> Yazdıklarınız bu bilgisayarda saklandı, kaybolmadı. <a href="/kekeme-onizleme/yonetim/giris/">Buraya dokunup yeniden giriş yapın</a>; aynı sayfaya döneceksiniz ve <strong>Taslağı geri getir</strong> diyerek kaldığınız yerden devam edersiniz.</p>
     </div>
     
     
     
 <div class="login login--wide">
-  <img class="login__logo" src="/kekeme-onizleme/static/img/logo.png" alt="Kekeme Yayınları" width="110" height="102">
   <h1>Şifrenizi mi unuttunuz?</h1>
-  <p class="lead">Endişelenmeyin, kimseyi aramanıza gerek yok. Aşağıdaki yollardan biriyle birkaç dakikada yeni şifre belirleyebilirsiniz.</p>
+  <p class="lead">Endişelenmeyin, kimseyi aramanıza gerek yok. Birkaç dakikada yeni şifre belirleyebilirsiniz.</p>
 
   
   
 
   <section class="panel">
-    <h2 class="adm-h2"><span class="step__n">1</span> Kurtarma kartındaki kodla</h2>
+    <h2 class="adm-h2">Kurtarma kartındaki kodla</h2>
     <p>Size verilen <strong>kurtarma kartında</strong> 8 kod yazılıdır (örneğin <strong>KM7P-3XQA</strong>). Her kod bir kez kullanılır.</p>
     <form method="post" action="/yonetim/sifremi-unuttum/kod" class="aform aform--narrow">
-      <input type="hidden" name="_csrf" value="Fvn-U-jDs81-bLtaCC51JuqLk6FYsXBToZDk-m2lTnc">
+      <input type="hidden" name="_csrf" value="Hdrvf3H9QZ15K0nNVLCXK1aSgmBZtvQzOzJ69kXKfcE">
       <div class="f"><label for="fu-user">Kullanıcı adınız</label><input id="fu-user" name="username" autocomplete="username" autocapitalize="none" required maxlength="100" value=""></div>
       <div class="f"><label for="fu-code">Kurtarma kodu</label><p class="f__hint">Kartta yazdığı gibi. Büyük/küçük harf fark etmez.</p><input id="fu-code" name="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required maxlength="20"></div>
-      <div class="f"><label for="fu-n1">Yeni şifre</label><p class="f__hint">En az 10 karakter. Kolay hatırlayacağınız birkaç kelime iyi bir seçimdir: <em>mavi kapı çay saati</em></p>
+      <div class="f"><label for="fu-n1">Yeni şifre</label><p class="f__hint">En az 10 harf. Örnek: <em>mavi kapı çay saati</em></p>
         <div class="pw"><input id="fu-n1" name="new1" type="password" autocomplete="new-password" required minlength="10" maxlength="200"><button type="button" class="abtn abtn--line pw__toggle" data-pw-toggle="fu-n1" aria-pressed="false">Göster</button></div></div>
       <div class="f"><label for="fu-n2">Yeni şifre (tekrar)</label>
         <div class="pw"><input id="fu-n2" name="new2" type="password" autocomplete="new-password" required minlength="10" maxlength="200"><button type="button" class="abtn abtn--line pw__toggle" data-pw-toggle="fu-n2" aria-pressed="false">Göster</button></div></div>

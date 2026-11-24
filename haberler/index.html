@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon" href="/kekeme-onizleme/static/img/logo-192.png">
   <link rel="preload" href="/kekeme-onizleme/static/fonts/libre-caslon-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/kekeme-onizleme/static/fonts/libre-caslon-text-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/kekeme-onizleme/static/css/site.css?v=f9d07d3552">
+  <link rel="stylesheet" href="/kekeme-onizleme/static/css/site.css?v=3f4e5d0414">
   <meta name="theme-color" content="#f3eee4">
   <meta property="og:image:alt" content="Kekeme Yayınları">
   
@@ -41,14 +41,14 @@
   <header class="masthead">
     <div class="wrap masthead__row">
       <a class="logo" href="/kekeme-onizleme/" aria-label="Kekeme Yayınları — ana sayfa">
-        <img class="logo__mark" src="/kekeme-onizleme/static/img/logo.png" alt="" width="64" height="59">
+        <img class="logo__mark" src="/kekeme-onizleme/static/img/logo-128.webp" alt="" width="64" height="59">
         <span class="logo__text"><span class="logo__word">Kekeme Yayınları</span></span>
       </a>
 
-      <input type="checkbox" id="menu-ac" class="menu-toggle" aria-hidden="true">
+      <input type="checkbox" id="menu-ac" class="menu-toggle" aria-label="Menü" aria-controls="ana-menu">
       <label for="menu-ac" class="menu-btn"><span></span><span class="sr">Menü</span></label>
 
-      <nav class="nav" aria-label="Ana menü">
+      <nav class="nav" id="ana-menu" aria-label="Ana menü">
         <a href="/kekeme-onizleme/kitaplar/" >Kitaplar</a>
         <a href="/kekeme-onizleme/kitaplar/durum-yakinda/" >Sıradakiler</a>
         <a href="/kekeme-onizleme/yazarlar/" >Yazarlar</a>
@@ -81,18 +81,6 @@
   
     <div class="posts">
   <article class="post">
-    <a href="/kekeme-onizleme/haber/tuyap-ankara-kitap-fuarindayiz/" class="post__link">
-      
-        <span class="post__date"><b>18</b>Ocak 2027</span>
-      
-      <span class="post__kind">Etkinlik</span>
-      <h2 class="post__title">TÜYAP Ankara Kitap Fuarı’ndayız</h2>
-      <p class="post__text">Fuar boyunca standımızda yeni kitaplarımızı bulabilirsiniz. Cumartesi günü Nevin Aral imzada.</p>
-      <p class="post__place">ATO Congresium · Stant 4-112</p>
-    </a>
-  </article>
-
-  <article class="post">
     <a href="/kekeme-onizleme/haber/yarim-ses-uzerine-soylesi-kerem-sagnak/" class="post__link">
       
         <span class="post__date"><b>6</b>Aralık 2026</span>
@@ -101,6 +89,18 @@
       <h2 class="post__title">Yarım Ses üzerine söyleşi: Kerem Sağnak</h2>
       <p class="post__text">Kerem Sağnak, ilk romanı Yarım Ses’i okurlarla konuşuyor. Söyleşinin ardından imza.</p>
       <p class="post__place">Moda Kitapçısı, Kadıköy · 19.00</p>
+    </a>
+  </article>
+
+  <article class="post">
+    <a href="/kekeme-onizleme/haber/tuyap-ankara-kitap-fuarindayiz/" class="post__link">
+      
+        <span class="post__date"><b>18</b>Ocak 2027</span>
+      
+      <span class="post__kind">Etkinlik</span>
+      <h2 class="post__title">TÜYAP Ankara Kitap Fuarı’ndayız</h2>
+      <p class="post__text">Fuar boyunca standımızda yeni kitaplarımızı bulabilirsiniz. Cumartesi günü Nevin Aral imzada.</p>
+      <p class="post__place">ATO Congresium · Stant 4-112</p>
     </a>
   </article>
 
@@ -132,7 +132,7 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div class="footer__brand">
-        <a class="logo logo--footer" href="/kekeme-onizleme/"><img src="/kekeme-onizleme/static/img/logo-acik.png" alt="Kekeme Yayınları" width="150" height="139"></a>
+        <a class="logo logo--footer" href="/kekeme-onizleme/"><img src="/kekeme-onizleme/static/img/logo-acik.png" alt="Kekeme Yayınları" width="150" height="139" loading="lazy"></a>
         
         <p class="footer__imprint">Kekeme Yayınları · KKM Yayınları</p>
       </div>
