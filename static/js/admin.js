@@ -278,7 +278,8 @@
         t.focus();
         return false;
       };
-      var go = function (i) {
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var go = function (i, initial) {
         if (i > 0 && !titleOk()) { i = 0; }
         cur = Math.max(0, Math.min(steps.length - 1, i));
         steps.forEach(function (st, k) { st.hidden = k !== cur; });
@@ -293,8 +294,13 @@
         counter.textContent = 'Adım ' + (cur + 1) + ' / ' + steps.length;
         // Adımın ilk alanına odaklan: dosya düğmesi, seçili seçenek ya da ilk kutu.
         var first = steps[cur].querySelector('input[type=radio]:checked, input:not([type=hidden]):not([type=radio]), textarea, select');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, 250);
+        // Sayfanın en üstüne değil, adım çubuğuna kaydır; çubuk zaten görünüyorsa hiç kaydırma.
+        // Böylece her adımda panelin başlığı ve menüsü yeniden araya girmez.
+        if (!initial) {
+          var r = list.getBoundingClientRect();
+          if (r.top < 0 || r.top > window.innerHeight * 0.5) list.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' });
+        }
+        if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, initial || reduceMotion ? 0 : 250);
       };
       back.addEventListener('click', function () { go(cur - 1); });
       next.addEventListener('click', function () { go(cur + 1); });
@@ -303,8 +309,8 @@
         if (e.key === 'Enter' && e.target.tagName === 'INPUT' && cur < steps.length - 1) { e.preventDefault(); go(cur + 1); }
       });
       wf.addEventListener('submit', function (e) { if (!titleOk()) { e.preventDefault(); go(0); } });
-      // Sunucu hata döndürdüyse ilk adımda başla.
-      go(0);
+      // Sunucu hata döndürdüyse ilk adımda başla (sayfa açılırken kaydırma yapılmaz).
+      go(0, true);
     }
   });
 })();
