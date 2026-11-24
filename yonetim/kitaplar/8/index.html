@@ -32,7 +32,7 @@
         <button type="button" class="adm-textsize" data-textsize>Yazı boyu: Normal</button>
         <a class="adm-top__link" href="/kekeme-onizleme/" target="_blank" rel="noopener">Sitede gör ↗</a>
         <form method="post" action="/yonetim/cikis">
-          <input type="hidden" name="_csrf" value="OEVcyDRtIbUpwF96u9x9S2bKPiFtwTUNBqFDJHNn-d0">
+          <input type="hidden" name="_csrf" value="yUIpP2j1iA8MiLa4YcxGbMl3wOatKTpvefWOs5ZEi4A">
           <button class="adm-top__link adm-top__logout" type="submit">Çıkış</button>
         </form>
       </div>
@@ -61,7 +61,7 @@
 <div class="editor">
 <form method="post" enctype="multipart/form-data" class="aform" data-draft="kitap-8"  data-preview-form
       action="/yonetim/kitaplar/8">
-  <input type="hidden" name="_csrf" value="OEVcyDRtIbUpwF96u9x9S2bKPiFtwTUNBqFDJHNn-d0">
+  <input type="hidden" name="_csrf" value="yUIpP2j1iA8MiLa4YcxGbMl3wOatKTpvefWOs5ZEi4A">
 
   
   
@@ -84,6 +84,19 @@
     aria-describedby="h-subtitle"  data-preview-src="subtitle">
 </div>
 
+    <div class="f" data-category>
+      <label for="f-category">Türü <span class="f__req">(zorunlu)</span></label>
+      <p class="f__hint" id="h-category">Kutuya dokunun, açılan listeden seçin.</p>
+      <select id="f-category" name="category" required aria-describedby="h-category" class="select-big">
+        <option value="">— Tür seçin —</option>
+        <option value="Roman" selected>Roman</option><option value="Öykü" >Öykü</option><option value="Şiir" >Şiir</option><option value="Deneme" >Deneme</option><option value="Anlatı" >Anlatı</option><option value="Anı" >Anı</option><option value="Biyografi" >Biyografi</option><option value="Gezi" >Gezi</option><option value="Mektup" >Mektup</option><option value="Tiyatro" >Tiyatro</option><option value="İnceleme" >İnceleme</option><option value="Araştırma" >Araştırma</option><option value="Tarih" >Tarih</option><option value="Felsefe" >Felsefe</option><option value="Çocuk" >Çocuk</option><option value="Gençlik" >Gençlik</option><option value="Çizgi Roman" >Çizgi Roman</option>
+        <option value="__yeni">Listede yok, kendim yazacağım…</option>
+      </select>
+      <div class="f f--sub" data-category-new>
+        <label for="f-new_category">Türün adını yazın</label>
+        <input id="f-new_category" name="new_category" type="text" maxlength="80" autocomplete="off" placeholder="Örn. Mektup">
+      </div>
+    </div>
   </fieldset>
 
   <fieldset class="step" data-step-title="Yazar">
@@ -236,16 +249,8 @@
     <label class="check check--big"><input type="checkbox" name="featured" value="1" > Bu kitabı ana sayfanın en üstünde büyük olarak göster</label>
 
     <details class="more" open>
-      <summary>Künye bilgileri (ISBN, sayfa sayısı, tür…) <span>(isteğe bağlı)</span></summary>
+      <summary>Künye bilgileri (dizi, ISBN, sayfa sayısı…) <span>(isteğe bağlı)</span></summary>
       <div class="grid2">
-        
-<div class="f">
-  <label for="f-category">Tür</label>
-  <p class="f__hint" id="h-category">Örn. Roman, Öykü, Şiir, Deneme</p>
-  <input id="f-category" name="category" type="text" value="Roman" maxlength="80"
-    aria-describedby="h-category"  list="tur-listesi" data-preview-src="category">
-</div>
-
         
 <div class="f">
   <label for="f-series">Dizi</label>
@@ -327,7 +332,6 @@
 </div>
 
       </div>
-      <datalist id="tur-listesi"><option value="Anı"><option value="Deneme"><option value="Gezi"><option value="Roman"><option value="Öykü"><option value="Şiir"><option value="Roman"><option value="Öykü"><option value="Şiir"><option value="Deneme"><option value="Anlatı"><option value="Çocuk"></datalist>
       <datalist id="dizi-listesi"><option value="Dünya Edebiyatı"><option value="Edebiyat"><option value="Kıyı Öyküleri"></datalist>
     </details>
   </fieldset>

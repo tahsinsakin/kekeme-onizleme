@@ -184,6 +184,21 @@
     }
 
     // --- Canlı önizleme: kitap sitede ve Google'da nasıl görünecek ---
+    // Kitap türü: "Listede yok" seçilince yeni tür kutusu görünür ve zorunlu olur.
+    document.querySelectorAll('[data-category]').forEach(function (box) {
+      var sel = box.querySelector('select');
+      var sub = box.querySelector('[data-category-new]');
+      var inp = sub.querySelector('input');
+      var sync = function () {
+        var on = sel.value === '__yeni';
+        sub.hidden = !on;
+        inp.required = on;
+        if (!on) inp.removeAttribute('aria-invalid');
+      };
+      sel.addEventListener('change', function () { sync(); if (sel.value === '__yeni') inp.focus(); });
+      sync();
+    });
+
     var pform = document.querySelector('[data-preview-form]');
     var pv = document.querySelector('[data-live-preview]');
     if (pform && pv) {
@@ -267,20 +282,39 @@
       bar.insertBefore(counter, bar.firstChild);
       submit.textContent = 'Kitabı ekle ✓';
 
-      var titleOk = function () {
-        var t = wf.elements.title;
-        if (t.value.trim()) { t.removeAttribute('aria-invalid'); var e = document.getElementById('err-title'); if (e) e.remove(); return true; }
-        t.setAttribute('aria-invalid', 'true');
-        if (!document.getElementById('err-title')) {
-          var p = document.createElement('p'); p.id = 'err-title'; p.className = 'f__err'; p.textContent = 'Devam etmek için kitabın adını yazın.';
-          t.parentNode.insertBefore(p, t);
+      // 1. adımın zorunlu alanları: kitabın adı ve türü.
+      var showErr = function (el, id, msg) {
+        el.setAttribute('aria-invalid', 'true');
+        if (!document.getElementById(id)) {
+          var p = document.createElement('p'); p.id = id; p.className = 'f__err'; p.textContent = msg;
+          el.parentNode.insertBefore(p, el);
         }
-        t.focus();
-        return false;
       };
+      var clearErr = function (el, id) { el.removeAttribute('aria-invalid'); var e = document.getElementById(id); if (e) e.remove(); };
+      var titleOk = function () {
+        var t = wf.elements.title, c = wf.elements.category, n = wf.elements.new_category;
+        var ok = true, firstBad = null;
+        if (t.value.trim()) clearErr(t, 'err-title'); else { showErr(t, 'err-title', 'Devam etmek için kitabın adını yazın.'); ok = false; firstBad = firstBad || t; }
+        if (c) {
+          if (c.value) clearErr(c, 'err-category'); else { showErr(c, 'err-category', 'Devam etmek için listeden kitabın türünü seçin.'); ok = false; firstBad = firstBad || c; }
+          if (c.value === '__yeni' && n) {
+            if (n.value.trim()) clearErr(n, 'err-newcat'); else { showErr(n, 'err-newcat', 'Türün adını yazın.'); ok = false; firstBad = firstBad || n; }
+          }
+        }
+        if (firstBad) firstBad.focus();
+        return ok;
+      };
+      ['input', 'change'].forEach(function (ev) {
+        wf.addEventListener(ev, function (e) {
+          if (e.target.name === 'title' && e.target.value.trim()) clearErr(e.target, 'err-title');
+          if (e.target.name === 'category' && e.target.value) clearErr(e.target, 'err-category');
+          if (e.target.name === 'new_category' && e.target.value.trim()) clearErr(e.target, 'err-newcat');
+        });
+      });
       var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var go = function (i, initial) {
-        if (i > 0 && !titleOk()) { i = 0; }
+        var invalid = i > 0 && !titleOk();
+        if (invalid) { i = 0; }
         cur = Math.max(0, Math.min(steps.length - 1, i));
         steps.forEach(function (st, k) { st.hidden = k !== cur; });
         list.querySelectorAll('li').forEach(function (li, k) {
@@ -300,7 +334,7 @@
           var r = list.getBoundingClientRect();
           if (r.top < 0 || r.top > window.innerHeight * 0.5) list.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' });
         }
-        if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, initial || reduceMotion ? 0 : 250);
+        if (first && !invalid) setTimeout(function () { first.focus({ preventScroll: true }); }, initial || reduceMotion ? 0 : 250);
       };
       back.addEventListener('click', function () { go(cur - 1); });
       next.addEventListener('click', function () { go(cur + 1); });
