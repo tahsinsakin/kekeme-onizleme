@@ -187,21 +187,24 @@ a:hover { color: var(--accent); }
    Telefonda kapak küçük ve metnin yanında durur. */
 .hero { padding: clamp(24px, 3.2vw, 44px) 0; border-bottom: 1px solid var(--rule); background: var(--paper-2); }
 .hero__grid { display: grid; grid-template-columns: 180px minmax(0, 1fr) minmax(220px, 300px); gap: clamp(20px, 3.5vw, 48px); align-items: center; }
-.hero__side { display: grid; gap: 8px; align-self: stretch; align-content: center; padding-left: clamp(20px, 3vw, 40px); border-left: 1px solid var(--rule); text-decoration: none; }
+.hero__side { display: grid; gap: 16px; align-self: stretch; align-content: center; padding-left: clamp(20px, 3vw, 40px); border-left: 1px solid var(--rule); }
+.hero__side-main { display: grid; gap: 8px; text-decoration: none; }
+.hero__side-all { justify-self: start; font-size: .9rem; }
 .hero__side .eyebrow { margin: 0; }
 .hero__side-date { font: 600 .8rem/1.2 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
 .hero__side-date b { font: 400 2.6rem/1 var(--serif-display); color: var(--ink); letter-spacing: -.005em; margin-right: 6px; vertical-align: -6px; }
 .hero__side-title { font: 400 1.35rem/1.2 var(--serif-display); }
-.hero__side:hover .hero__side-title { color: var(--accent); }
+.hero__side-main:hover .hero__side-title { color: var(--accent); }
 .hero__side-meta { font: 400 .9rem/1.4 var(--sans); color: var(--muted); }
 @media (max-width: 1100px) {
   .hero__grid { grid-template-columns: 160px minmax(0, 1fr); }
   /* Tablet ve telefon: sıradaki etkinlik gizlenmez, tanıtımın altında tam genişlikte ince bir şerit olur */
-  .hero__side { grid-column: 1 / -1; grid-template-columns: auto minmax(0, 1fr); column-gap: 16px; row-gap: 2px; align-items: center;
-    align-content: start; padding: 14px 0 0; margin-top: 4px; border-left: 0; border-top: 1px solid var(--rule); }
+  .hero__side { grid-column: 1 / -1; gap: 10px; align-content: start; padding: 14px 0 0; margin-top: 4px; border-left: 0; border-top: 1px solid var(--rule); }
+  .hero__side-main { grid-template-columns: auto minmax(0, 1fr); column-gap: 16px; row-gap: 2px; align-items: center; }
   .hero__side .eyebrow { grid-column: 1 / -1; margin-bottom: 4px; }
   .hero__side-date { grid-row: span 2; display: grid; justify-items: center; text-align: center; min-width: 64px; line-height: 1.1; }
   .hero__side-date b { display: block; margin: 0 0 2px; font-size: 2.1rem; vertical-align: 0; }
+  .hero__side-all { min-height: 44px; display: inline-flex; align-items: center; }
   .hero__side-title { font-size: 1.12rem; }
   .hero__side-meta { font-size: .85rem; }
 }
