@@ -257,7 +257,6 @@ a:hover { color: var(--accent); }
 .section--ink .section__head { border-color: rgba(243,238,228,.5); }
 .section--ink a:hover { color: #f19a8f; }
 .soon { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 32px; }
-@media (max-width: 680px) { .soon { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; } }
 .soon__item a { text-decoration: none; display: grid; gap: 10px; }
 .soon__date { font: 600 .74rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #f19a8f; border-top: 1px solid rgba(243,238,228,.35); padding-top: 12px; }
 .soon__cover { max-width: 150px; }
@@ -469,3 +468,15 @@ a:hover { color: var(--accent); }
 
 /* Çok dar telefonlar: ad menü düğmesine değmesin */
 @media (max-width: 360px) { .masthead__row { gap: 12px; } .logo { gap: 10px; } .logo__mark { width: 40px; } .logo__word { font-size: 1.12rem; } }
+
+/* Telefonda "Yeni çıkanlar" ve "Sıradakiler": parmakla sağa sola kaydırılan şerit.
+   Sağda yarım görünen kapak, kaydırılabildiğini belli eder. Masaüstü ve tablette ızgara kalır. */
+@media (max-width: 680px) {
+  .home .section .strip {
+    display: grid; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 42%; gap: 18px;
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gut);
+    margin-inline: calc(-1 * var(--gut)); padding: 4px var(--gut) 14px; scrollbar-width: thin;
+  }
+  .home .section .strip > * { scroll-snap-align: start; min-width: 0; }
+  .home .strip:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+}

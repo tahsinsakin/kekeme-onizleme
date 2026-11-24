@@ -32,7 +32,7 @@
         <button type="button" class="adm-textsize" data-textsize>Yazı boyu: Normal</button>
         <a class="adm-top__link" href="/kekeme-onizleme/" target="_blank" rel="noopener">Sitede gör ↗</a>
         <form method="post" action="/yonetim/cikis">
-          <input type="hidden" name="_csrf" value="yUIpP2j1iA8MiLa4YcxGbMl3wOatKTpvefWOs5ZEi4A">
+          <input type="hidden" name="_csrf" value="0Eeyb4uXCJaUWbQdH2dBUMOOcYVLMuYR5zQAnEGIWzY">
           <button class="adm-top__link adm-top__logout" type="submit">Çıkış</button>
         </form>
       </div>
@@ -59,7 +59,7 @@
 <p class="lead">Sitenin her sayfasında görünen genel bilgiler.</p>
 
 <form method="post" action="/yonetim/site-bilgileri" class="aform" data-draft="ayarlar">
-  <input type="hidden" name="_csrf" value="yUIpP2j1iA8MiLa4YcxGbMl3wOatKTpvefWOs5ZEi4A">
+  <input type="hidden" name="_csrf" value="0Eeyb4uXCJaUWbQdH2dBUMOOcYVLMuYR5zQAnEGIWzY">
   <fieldset class="step">
     <legend><span class="step__n">1</span> Yayınevi</legend>
     
@@ -113,8 +113,27 @@ Okurun zekâsına güvenen, yazarın sesine saygı duyan, çeviriyi bir sanat ve
 </div>
 
   </fieldset>
+  <fieldset class="step" id="sayfadan">
+    <legend><span class="step__n">2</span> Ana sayfadaki “Sayfadan” alıntısı</legend>
+    <p class="f__hint">Ana sayfada kitaplardan birinden kısa bir bölüm gösterilir. Hangi kitaptan olacağını buradan seçebilirsiniz.</p>
+    <div class="f">
+      <label for="f-quote_book">Hangi kitaptan?</label>
+      <select id="f-quote_book" name="quote_book">
+        <option value="" selected>Kendiliğinden seçilsin (en son eklenen okuma parçası)</option>
+        <option value="9" >Kars Defteri — okuma parçası yok, alıntıyı aşağıya yazın</option><option value="4" >Kuzeyden Mektuplar — okuma parçası yok, alıntıyı aşağıya yazın</option><option value="5" >Kırmızı Bina — okuma parçası yok, alıntıyı aşağıya yazın</option><option value="2" >Kıyıda Kalanlar</option><option value="8" >Rüzgârın Yönü — okuma parçası yok, alıntıyı aşağıya yazın</option><option value="7" >Sessiz Harfler — okuma parçası yok, alıntıyı aşağıya yazın</option><option value="3" >Tuz ve Gölge — okuma parçası yok, alıntıyı aşağıya yazın</option><option value="6" >Unutmanın Kitabı — okuma parçası yok, alıntıyı aşağıya yazın</option><option value="1" >Yarım Ses</option>
+        <option value="gizle" >Bu bölüm ana sayfada görünmesin</option>
+      </select>
+    </div>
+    
+<div class="f">
+  <label for="f-quote_text">Alıntı (isteğe bağlı)</label>
+  <p class="f__hint" id="h-quote_text">Kitaptan beğendiğiniz birkaç cümleyi yazın. Boş bırakırsanız seçtiğiniz kitabın okuma parçasının başı gösterilir. Yalnızca yukarıdan bir kitap seçtiyseniz kullanılır.</p>
+  <textarea id="f-quote_text" name="quote_text" rows="4" maxlength="700" aria-describedby="h-quote_text"></textarea>
+</div>
+
+  </fieldset>
   <fieldset class="step">
-    <legend><span class="step__n">2</span> İletişim bilgileri</legend>
+    <legend><span class="step__n">3</span> İletişim bilgileri</legend>
     
 <div class="f">
   <label for="f-address">Adres</label>
@@ -148,7 +167,7 @@ Okurun zekâsına güvenen, yazarın sesine saygı duyan, çeviriyi bir sanat ve
 
   </fieldset>
   <fieldset class="step">
-    <legend><span class="step__n">3</span> Sosyal medya</legend>
+    <legend><span class="step__n">4</span> Sosyal medya</legend>
     <p class="f__hint">Hesabınızın tam adresini yapıştırın. Boş bırakılanlar görünmez.</p>
     
 <div class="f">
@@ -176,7 +195,7 @@ Okurun zekâsına güvenen, yazarın sesine saygı duyan, çeviriyi bir sanat ve
 
   </fieldset>
   <fieldset class="step">
-    <legend><span class="step__n">4</span> Google’da görünüm</legend>
+    <legend><span class="step__n">5</span> Google’da görünüm</legend>
     
 <div class="f">
   <label for="f-meta_description">Google’da görünecek kısa tanıtım</label>
@@ -186,7 +205,7 @@ Okurun zekâsına güvenen, yazarın sesine saygı duyan, çeviriyi bir sanat ve
 
   </fieldset>
   <fieldset class="step">
-    <legend><span class="step__n">5</span> Bildirimler ve hatırlatmalar</legend>
+    <legend><span class="step__n">6</span> Bildirimler ve hatırlatmalar</legend>
     
 <div class="f">
   <label for="f-notify_email">Yeni mesajlar hangi e-postaya bildirilsin?</label>
@@ -221,7 +240,7 @@ Okurun zekâsına güvenen, yazarın sesine saygı duyan, çeviriyi bir sanat ve
 
   </fieldset>
   <fieldset class="step">
-    <legend><span class="step__n">6</span> Teknik destek <span class="f__hint">(isteğe bağlı)</span></legend>
+    <legend><span class="step__n">7</span> Teknik destek <span class="f__hint">(isteğe bağlı)</span></legend>
     <p class="f__hint">Yazarsanız panelde “Yardım” sayfasında tek dokunuşla aranabilir.</p>
     
 <div class="f">
